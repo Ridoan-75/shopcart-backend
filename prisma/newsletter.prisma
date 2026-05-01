@@ -1,0 +1,11 @@
+model Newsletter {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  name           String?
+  isActive       Boolean   @default(true)
+  subscribedAt   DateTime  @default(now())
+  unsubscribedAt DateTime?
+  token          String?
+
+  @@map("newsletters")
+}

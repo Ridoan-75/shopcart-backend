@@ -1,0 +1,23 @@
+model Payment {
+  id              String        @id @default(cuid())
+  orderId         String        @unique
+  amount          Float
+  currency        String        @default("USD")
+  method          PaymentMethod
+  status          PaymentStatus @default(PENDING)
+  transactionId   String?
+  stripePaymentId String?
+  stripeSessionId String?
+  receiptUrl      String?
+  failureReason   String?
+  refundedAt      DateTime?
+  refundAmount    Float?
+  paidAt          DateTime?
+  metadata        Json?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@map("payments")
+}

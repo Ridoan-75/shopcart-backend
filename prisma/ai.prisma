@@ -1,0 +1,20 @@
+model SearchLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  query     String
+  results   Int      @default(0)
+  ip        String?
+  createdAt DateTime @default(now())
+
+  @@map("search_logs")
+}
+
+model AiRecommendation {
+  id          String   @id @default(cuid())
+  userId      String
+  productIds  String[]
+  context     String?
+  generatedAt DateTime @default(now())
+
+  @@map("ai_recommendations")
+}

@@ -1,0 +1,19 @@
+model Shipping {
+  id             String         @id @default(cuid())
+  orderId        String         @unique
+  carrier        String?
+  trackingNumber String?
+  trackingUrl    String?
+  status         ShippingStatus @default(NOT_SHIPPED)
+  estimatedAt    DateTime?
+  shippedAt      DateTime?
+  deliveredAt    DateTime?
+  returnedAt     DateTime?
+  notes          String?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@map("shippings")
+}

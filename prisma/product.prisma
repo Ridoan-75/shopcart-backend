@@ -1,0 +1,41 @@
+model Product {
+    id               String   @id @default(cuid())
+    name             String
+    slug             String   @unique
+    description      String
+    shortDescription String?
+    sku              String   @unique
+    price            Float
+    comparePrice     Float?
+    costPrice        Float?
+    categoryId       String
+    brandId          String?
+    images           String[]
+    thumbnail        String?
+    isActive         Boolean  @default(true)
+    isFeatured       Boolean  @default(false)
+    isNewArrival     Boolean  @default(false)
+    isBestSeller     Boolean  @default(false)
+    weight           Float?
+    dimensions       Json?
+    metaTitle        String?
+    metaDescription  String?
+    metaKeywords     String[]
+    totalSold        Int      @default(0)
+    avgRating        Float    @default(0)
+    totalReviews     Int      @default(0)
+    createdAt        DateTime @default(now())
+    updatedAt        DateTime @updatedAt
+
+    category       Category        @relation(fields: [categoryId], references: [id])
+    brand          Brand?          @relation(fields: [brandId], references: [id])
+    inventory      Inventory?
+    tags           ProductTag[]
+    reviews        Review[]
+    cartItems      CartItem[]
+    orderItems     OrderItem[]
+    wishlist       Wishlist[]
+    flashSaleItems FlashSaleItem[]
+
+    @@map("products")
+}

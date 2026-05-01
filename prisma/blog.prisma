@@ -1,0 +1,58 @@
+model BlogCategory {
+    id          String   @id @default(cuid())
+    name        String   @unique
+    slug        String   @unique
+    description String?
+    image       String?
+    isActive    Boolean  @default(true)
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+
+    blogs Blog[]
+
+    @@map("blog_categories")
+}
+
+model Blog {
+    id              String     @id @default(cuid())
+    title           String
+    slug            String     @unique
+    excerpt         String?
+    content         String
+    coverImage      String?
+    categoryId      String
+    authorId        String?
+    status          BlogStatus @default(DRAFT)
+    isFeatured      Boolean    @default(false)
+    tags            String[]
+    views           Int        @default(0)
+    readingTime     Int?
+    metaTitle       String?
+    metaDescription String?
+    publishedAt     DateTime?
+    createdAt       DateTime   @default(now())
+    updatedAt       DateTime   @updatedAt
+
+    category BlogCategory  @relation(fields: [categoryId], references: [id])
+    comments BlogComment[]
+
+    @@map("blogs")
+}
+
+model BlogComment {
+    id         String   @id @default(cuid())
+    blogId     String
+    userId     String
+    parentId   String?
+    body       String
+    isApproved Boolean  @default(false)
+    createdAt  DateTime @default(now())
+    updatedAt  DateTime @updatedAt
+
+    blog    Blog          @relation(fields: [blogId], references: [id], onDelete: Cascade)
+    user    User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+    parent  BlogComment?  @relation("CommentReplies", fields: [parentId], references: [id])
+    replies BlogComment[] @relation("CommentReplies")
+
+    @@map("blog_comments")
+}

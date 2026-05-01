@@ -1,0 +1,17 @@
+model Inventory {
+  id                String    @id @default(cuid())
+  productId         String    @unique
+  quantity          Int       @default(0)
+  reservedQty       Int       @default(0)
+  lowStockAlert     Int       @default(5)
+  allowBackorder    Boolean   @default(false)
+  trackInventory    Boolean   @default(true)
+  warehouseLocation String?
+  lastRestockedAt   DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@map("inventories")
+}

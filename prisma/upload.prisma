@@ -1,0 +1,15 @@
+model Upload {
+  id           String   @id @default(cuid())
+  url          String
+  publicId     String   @unique
+  format       String?
+  resourceType String   @default("image")
+  size         Int?
+  width        Int?
+  height       Int?
+  folder       String?
+  uploadedBy   String?
+  createdAt    DateTime @default(now())
+
+  @@map("uploads")
+}

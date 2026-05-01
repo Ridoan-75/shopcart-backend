@@ -7,10 +7,77 @@ datasource db {
   provider = "postgresql"
 }
 
-model User {
-    id        String   @id @default(uuid())
-    email     String   @unique
-    name      String?
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
+enum Role {
+  USER
+  ADMIN
+  SELLER
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+  REFUNDED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+  PARTIALLY_REFUNDED
+}
+
+enum PaymentMethod {
+  STRIPE
+  PAYPAL
+  COD
+  BANK_TRANSFER
+}
+
+enum ShippingStatus {
+  NOT_SHIPPED
+  PROCESSING
+  SHIPPED
+  IN_TRANSIT
+  DELIVERED
+  RETURNED
+}
+
+enum NotificationType {
+  ORDER_UPDATE
+  PAYMENT
+  PROMOTION
+  SYSTEM
+  REVIEW
+  WISHLIST
+}
+
+enum CouponType {
+  PERCENTAGE
+  FIXED_AMOUNT
+  FREE_SHIPPING
+}
+
+enum BannerPosition {
+  HERO
+  SIDEBAR
+  POPUP
+  MIDDLE
+}
+
+enum BlogStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum ContactStatus {
+  UNREAD
+  READ
+  REPLIED
+  RESOLVED
 }

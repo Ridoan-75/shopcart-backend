@@ -1,0 +1,33 @@
+model FlashSale {
+    id          String   @id @default(cuid())
+    title       String
+    description String?
+    banner      String?
+    startsAt    DateTime
+    endsAt      DateTime
+    isActive    Boolean  @default(true)
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+
+    items FlashSaleItem[]
+
+    @@map("flash_sales")
+}
+
+model FlashSaleItem {
+    id              String   @id @default(cuid())
+    flashSaleId     String
+    productId       String
+    salePrice       Float
+    originalPrice   Float
+    discountPercent Float
+    stockLimit      Int?
+    soldCount       Int      @default(0)
+    createdAt       DateTime @default(now())
+
+    flashSale FlashSale @relation(fields: [flashSaleId], references: [id], onDelete: Cascade)
+    product   Product   @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+    @@unique([flashSaleId, productId])
+    @@map("flash_sale_items")
+}
