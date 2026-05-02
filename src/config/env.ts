@@ -22,4 +22,7 @@ export const env = {
 
   clientUrl: process.env.CLIENT_URL || "http://localhost:3000",
   port: Number(process.env.PORT),
+
+  stripeSecretKey: process.env.STRIPE_SECRET_KEY!,
+  stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET!,
 };
