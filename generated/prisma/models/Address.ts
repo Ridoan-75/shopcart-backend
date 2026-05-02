@@ -442,16 +442,6 @@ export type AddressUncheckedUpdateManyInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type AddressListRelationFilter = {
-  every?: Prisma.AddressWhereInput
-  some?: Prisma.AddressWhereInput
-  none?: Prisma.AddressWhereInput
-}
-
-export type AddressOrderByRelationAggregateInput = {
-  _count?: Prisma.SortOrder
-}
-
 export type AddressCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   userId?: Prisma.SortOrder
@@ -505,6 +495,48 @@ export type AddressNullableScalarRelationFilter = {
   isNot?: Prisma.AddressWhereInput | null
 }
 
+export type AddressListRelationFilter = {
+  every?: Prisma.AddressWhereInput
+  some?: Prisma.AddressWhereInput
+  none?: Prisma.AddressWhereInput
+}
+
+export type AddressOrderByRelationAggregateInput = {
+  _count?: Prisma.SortOrder
+}
+
+export type StringFieldUpdateOperationsInput = {
+  set?: string
+}
+
+export type NullableStringFieldUpdateOperationsInput = {
+  set?: string | null
+}
+
+export type BoolFieldUpdateOperationsInput = {
+  set?: boolean
+}
+
+export type DateTimeFieldUpdateOperationsInput = {
+  set?: Date | string
+}
+
+export type AddressCreateNestedOneWithoutOrdersInput = {
+  create?: Prisma.XOR<Prisma.AddressCreateWithoutOrdersInput, Prisma.AddressUncheckedCreateWithoutOrdersInput>
+  connectOrCreate?: Prisma.AddressCreateOrConnectWithoutOrdersInput
+  connect?: Prisma.AddressWhereUniqueInput
+}
+
+export type AddressUpdateOneWithoutOrdersNestedInput = {
+  create?: Prisma.XOR<Prisma.AddressCreateWithoutOrdersInput, Prisma.AddressUncheckedCreateWithoutOrdersInput>
+  connectOrCreate?: Prisma.AddressCreateOrConnectWithoutOrdersInput
+  upsert?: Prisma.AddressUpsertWithoutOrdersInput
+  disconnect?: Prisma.AddressWhereInput | boolean
+  delete?: Prisma.AddressWhereInput | boolean
+  connect?: Prisma.AddressWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.AddressUpdateToOneWithWhereWithoutOrdersInput, Prisma.AddressUpdateWithoutOrdersInput>, Prisma.AddressUncheckedUpdateWithoutOrdersInput>
+}
+
 export type AddressCreateNestedManyWithoutUserInput = {
   create?: Prisma.XOR<Prisma.AddressCreateWithoutUserInput, Prisma.AddressUncheckedCreateWithoutUserInput> | Prisma.AddressCreateWithoutUserInput[] | Prisma.AddressUncheckedCreateWithoutUserInput[]
   connectOrCreate?: Prisma.AddressCreateOrConnectWithoutUserInput | Prisma.AddressCreateOrConnectWithoutUserInput[]
@@ -545,99 +577,6 @@ export type AddressUncheckedUpdateManyWithoutUserNestedInput = {
   update?: Prisma.AddressUpdateWithWhereUniqueWithoutUserInput | Prisma.AddressUpdateWithWhereUniqueWithoutUserInput[]
   updateMany?: Prisma.AddressUpdateManyWithWhereWithoutUserInput | Prisma.AddressUpdateManyWithWhereWithoutUserInput[]
   deleteMany?: Prisma.AddressScalarWhereInput | Prisma.AddressScalarWhereInput[]
-}
-
-export type AddressCreateNestedOneWithoutOrdersInput = {
-  create?: Prisma.XOR<Prisma.AddressCreateWithoutOrdersInput, Prisma.AddressUncheckedCreateWithoutOrdersInput>
-  connectOrCreate?: Prisma.AddressCreateOrConnectWithoutOrdersInput
-  connect?: Prisma.AddressWhereUniqueInput
-}
-
-export type AddressUpdateOneWithoutOrdersNestedInput = {
-  create?: Prisma.XOR<Prisma.AddressCreateWithoutOrdersInput, Prisma.AddressUncheckedCreateWithoutOrdersInput>
-  connectOrCreate?: Prisma.AddressCreateOrConnectWithoutOrdersInput
-  upsert?: Prisma.AddressUpsertWithoutOrdersInput
-  disconnect?: Prisma.AddressWhereInput | boolean
-  delete?: Prisma.AddressWhereInput | boolean
-  connect?: Prisma.AddressWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.AddressUpdateToOneWithWhereWithoutOrdersInput, Prisma.AddressUpdateWithoutOrdersInput>, Prisma.AddressUncheckedUpdateWithoutOrdersInput>
-}
-
-export type AddressCreateWithoutUserInput = {
-  id?: string
-  label?: string | null
-  fullName: string
-  phone: string
-  street: string
-  city: string
-  state: string
-  country: string
-  postalCode: string
-  isDefault?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  orders?: Prisma.OrderCreateNestedManyWithoutAddressInput
-}
-
-export type AddressUncheckedCreateWithoutUserInput = {
-  id?: string
-  label?: string | null
-  fullName: string
-  phone: string
-  street: string
-  city: string
-  state: string
-  country: string
-  postalCode: string
-  isDefault?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  orders?: Prisma.OrderUncheckedCreateNestedManyWithoutAddressInput
-}
-
-export type AddressCreateOrConnectWithoutUserInput = {
-  where: Prisma.AddressWhereUniqueInput
-  create: Prisma.XOR<Prisma.AddressCreateWithoutUserInput, Prisma.AddressUncheckedCreateWithoutUserInput>
-}
-
-export type AddressCreateManyUserInputEnvelope = {
-  data: Prisma.AddressCreateManyUserInput | Prisma.AddressCreateManyUserInput[]
-  skipDuplicates?: boolean
-}
-
-export type AddressUpsertWithWhereUniqueWithoutUserInput = {
-  where: Prisma.AddressWhereUniqueInput
-  update: Prisma.XOR<Prisma.AddressUpdateWithoutUserInput, Prisma.AddressUncheckedUpdateWithoutUserInput>
-  create: Prisma.XOR<Prisma.AddressCreateWithoutUserInput, Prisma.AddressUncheckedCreateWithoutUserInput>
-}
-
-export type AddressUpdateWithWhereUniqueWithoutUserInput = {
-  where: Prisma.AddressWhereUniqueInput
-  data: Prisma.XOR<Prisma.AddressUpdateWithoutUserInput, Prisma.AddressUncheckedUpdateWithoutUserInput>
-}
-
-export type AddressUpdateManyWithWhereWithoutUserInput = {
-  where: Prisma.AddressScalarWhereInput
-  data: Prisma.XOR<Prisma.AddressUpdateManyMutationInput, Prisma.AddressUncheckedUpdateManyWithoutUserInput>
-}
-
-export type AddressScalarWhereInput = {
-  AND?: Prisma.AddressScalarWhereInput | Prisma.AddressScalarWhereInput[]
-  OR?: Prisma.AddressScalarWhereInput[]
-  NOT?: Prisma.AddressScalarWhereInput | Prisma.AddressScalarWhereInput[]
-  id?: Prisma.StringFilter<"Address"> | string
-  userId?: Prisma.StringFilter<"Address"> | string
-  label?: Prisma.StringNullableFilter<"Address"> | string | null
-  fullName?: Prisma.StringFilter<"Address"> | string
-  phone?: Prisma.StringFilter<"Address"> | string
-  street?: Prisma.StringFilter<"Address"> | string
-  city?: Prisma.StringFilter<"Address"> | string
-  state?: Prisma.StringFilter<"Address"> | string
-  country?: Prisma.StringFilter<"Address"> | string
-  postalCode?: Prisma.StringFilter<"Address"> | string
-  isDefault?: Prisma.BoolFilter<"Address"> | boolean
-  createdAt?: Prisma.DateTimeFilter<"Address"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Address"> | Date | string
 }
 
 export type AddressCreateWithoutOrdersInput = {
@@ -718,6 +657,83 @@ export type AddressUncheckedUpdateWithoutOrdersInput = {
   isDefault?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+}
+
+export type AddressCreateWithoutUserInput = {
+  id?: string
+  label?: string | null
+  fullName: string
+  phone: string
+  street: string
+  city: string
+  state: string
+  country: string
+  postalCode: string
+  isDefault?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  orders?: Prisma.OrderCreateNestedManyWithoutAddressInput
+}
+
+export type AddressUncheckedCreateWithoutUserInput = {
+  id?: string
+  label?: string | null
+  fullName: string
+  phone: string
+  street: string
+  city: string
+  state: string
+  country: string
+  postalCode: string
+  isDefault?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  orders?: Prisma.OrderUncheckedCreateNestedManyWithoutAddressInput
+}
+
+export type AddressCreateOrConnectWithoutUserInput = {
+  where: Prisma.AddressWhereUniqueInput
+  create: Prisma.XOR<Prisma.AddressCreateWithoutUserInput, Prisma.AddressUncheckedCreateWithoutUserInput>
+}
+
+export type AddressCreateManyUserInputEnvelope = {
+  data: Prisma.AddressCreateManyUserInput | Prisma.AddressCreateManyUserInput[]
+  skipDuplicates?: boolean
+}
+
+export type AddressUpsertWithWhereUniqueWithoutUserInput = {
+  where: Prisma.AddressWhereUniqueInput
+  update: Prisma.XOR<Prisma.AddressUpdateWithoutUserInput, Prisma.AddressUncheckedUpdateWithoutUserInput>
+  create: Prisma.XOR<Prisma.AddressCreateWithoutUserInput, Prisma.AddressUncheckedCreateWithoutUserInput>
+}
+
+export type AddressUpdateWithWhereUniqueWithoutUserInput = {
+  where: Prisma.AddressWhereUniqueInput
+  data: Prisma.XOR<Prisma.AddressUpdateWithoutUserInput, Prisma.AddressUncheckedUpdateWithoutUserInput>
+}
+
+export type AddressUpdateManyWithWhereWithoutUserInput = {
+  where: Prisma.AddressScalarWhereInput
+  data: Prisma.XOR<Prisma.AddressUpdateManyMutationInput, Prisma.AddressUncheckedUpdateManyWithoutUserInput>
+}
+
+export type AddressScalarWhereInput = {
+  AND?: Prisma.AddressScalarWhereInput | Prisma.AddressScalarWhereInput[]
+  OR?: Prisma.AddressScalarWhereInput[]
+  NOT?: Prisma.AddressScalarWhereInput | Prisma.AddressScalarWhereInput[]
+  id?: Prisma.StringFilter<"Address"> | string
+  userId?: Prisma.StringFilter<"Address"> | string
+  label?: Prisma.StringNullableFilter<"Address"> | string | null
+  fullName?: Prisma.StringFilter<"Address"> | string
+  phone?: Prisma.StringFilter<"Address"> | string
+  street?: Prisma.StringFilter<"Address"> | string
+  city?: Prisma.StringFilter<"Address"> | string
+  state?: Prisma.StringFilter<"Address"> | string
+  country?: Prisma.StringFilter<"Address"> | string
+  postalCode?: Prisma.StringFilter<"Address"> | string
+  isDefault?: Prisma.BoolFilter<"Address"> | boolean
+  createdAt?: Prisma.DateTimeFilter<"Address"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"Address"> | Date | string
 }
 
 export type AddressCreateManyUserInput = {

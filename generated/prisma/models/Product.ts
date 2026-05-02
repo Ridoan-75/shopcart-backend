@@ -815,14 +815,6 @@ export type ProductScalarRelationFilter = {
   isNot?: Prisma.ProductWhereInput
 }
 
-export type StringNullableListFilter<$PrismaModel = never> = {
-  equals?: string[] | Prisma.ListStringFieldRefInput<$PrismaModel> | null
-  has?: string | Prisma.StringFieldRefInput<$PrismaModel> | null
-  hasEvery?: string[] | Prisma.ListStringFieldRefInput<$PrismaModel>
-  hasSome?: string[] | Prisma.ListStringFieldRefInput<$PrismaModel>
-  isEmpty?: boolean
-}
-
 export type ProductCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   name?: Prisma.SortOrder
@@ -927,48 +919,6 @@ export type ProductSumOrderByAggregateInput = {
   totalReviews?: Prisma.SortOrder
 }
 
-export type ProductCreateNestedManyWithoutCategoryInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput> | Prisma.ProductCreateWithoutCategoryInput[] | Prisma.ProductUncheckedCreateWithoutCategoryInput[]
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutCategoryInput | Prisma.ProductCreateOrConnectWithoutCategoryInput[]
-  createMany?: Prisma.ProductCreateManyCategoryInputEnvelope
-  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-}
-
-export type ProductUncheckedCreateNestedManyWithoutCategoryInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput> | Prisma.ProductCreateWithoutCategoryInput[] | Prisma.ProductUncheckedCreateWithoutCategoryInput[]
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutCategoryInput | Prisma.ProductCreateOrConnectWithoutCategoryInput[]
-  createMany?: Prisma.ProductCreateManyCategoryInputEnvelope
-  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-}
-
-export type ProductUpdateManyWithoutCategoryNestedInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput> | Prisma.ProductCreateWithoutCategoryInput[] | Prisma.ProductUncheckedCreateWithoutCategoryInput[]
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutCategoryInput | Prisma.ProductCreateOrConnectWithoutCategoryInput[]
-  upsert?: Prisma.ProductUpsertWithWhereUniqueWithoutCategoryInput | Prisma.ProductUpsertWithWhereUniqueWithoutCategoryInput[]
-  createMany?: Prisma.ProductCreateManyCategoryInputEnvelope
-  set?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  disconnect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  delete?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  update?: Prisma.ProductUpdateWithWhereUniqueWithoutCategoryInput | Prisma.ProductUpdateWithWhereUniqueWithoutCategoryInput[]
-  updateMany?: Prisma.ProductUpdateManyWithWhereWithoutCategoryInput | Prisma.ProductUpdateManyWithWhereWithoutCategoryInput[]
-  deleteMany?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
-}
-
-export type ProductUncheckedUpdateManyWithoutCategoryNestedInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput> | Prisma.ProductCreateWithoutCategoryInput[] | Prisma.ProductUncheckedCreateWithoutCategoryInput[]
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutCategoryInput | Prisma.ProductCreateOrConnectWithoutCategoryInput[]
-  upsert?: Prisma.ProductUpsertWithWhereUniqueWithoutCategoryInput | Prisma.ProductUpsertWithWhereUniqueWithoutCategoryInput[]
-  createMany?: Prisma.ProductCreateManyCategoryInputEnvelope
-  set?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  disconnect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  delete?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
-  update?: Prisma.ProductUpdateWithWhereUniqueWithoutCategoryInput | Prisma.ProductUpdateWithWhereUniqueWithoutCategoryInput[]
-  updateMany?: Prisma.ProductUpdateManyWithWhereWithoutCategoryInput | Prisma.ProductUpdateManyWithWhereWithoutCategoryInput[]
-  deleteMany?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
-}
-
 export type ProductCreateNestedManyWithoutBrandInput = {
   create?: Prisma.XOR<Prisma.ProductCreateWithoutBrandInput, Prisma.ProductUncheckedCreateWithoutBrandInput> | Prisma.ProductCreateWithoutBrandInput[] | Prisma.ProductUncheckedCreateWithoutBrandInput[]
   connectOrCreate?: Prisma.ProductCreateOrConnectWithoutBrandInput | Prisma.ProductCreateOrConnectWithoutBrandInput[]
@@ -1011,68 +961,6 @@ export type ProductUncheckedUpdateManyWithoutBrandNestedInput = {
   deleteMany?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
 }
 
-export type ProductCreateNestedOneWithoutTagsInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutTagsInput, Prisma.ProductUncheckedCreateWithoutTagsInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutTagsInput
-  connect?: Prisma.ProductWhereUniqueInput
-}
-
-export type ProductUpdateOneRequiredWithoutTagsNestedInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutTagsInput, Prisma.ProductUncheckedCreateWithoutTagsInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutTagsInput
-  upsert?: Prisma.ProductUpsertWithoutTagsInput
-  connect?: Prisma.ProductWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.ProductUpdateToOneWithWhereWithoutTagsInput, Prisma.ProductUpdateWithoutTagsInput>, Prisma.ProductUncheckedUpdateWithoutTagsInput>
-}
-
-export type ProductCreateimagesInput = {
-  set: string[]
-}
-
-export type ProductCreatemetaKeywordsInput = {
-  set: string[]
-}
-
-export type FloatFieldUpdateOperationsInput = {
-  set?: number
-  increment?: number
-  decrement?: number
-  multiply?: number
-  divide?: number
-}
-
-export type NullableFloatFieldUpdateOperationsInput = {
-  set?: number | null
-  increment?: number
-  decrement?: number
-  multiply?: number
-  divide?: number
-}
-
-export type ProductUpdateimagesInput = {
-  set?: string[]
-  push?: string | string[]
-}
-
-export type ProductUpdatemetaKeywordsInput = {
-  set?: string[]
-  push?: string | string[]
-}
-
-export type ProductCreateNestedOneWithoutInventoryInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutInventoryInput, Prisma.ProductUncheckedCreateWithoutInventoryInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutInventoryInput
-  connect?: Prisma.ProductWhereUniqueInput
-}
-
-export type ProductUpdateOneRequiredWithoutInventoryNestedInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutInventoryInput, Prisma.ProductUncheckedCreateWithoutInventoryInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutInventoryInput
-  upsert?: Prisma.ProductUpsertWithoutInventoryInput
-  connect?: Prisma.ProductWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.ProductUpdateToOneWithWhereWithoutInventoryInput, Prisma.ProductUpdateWithoutInventoryInput>, Prisma.ProductUncheckedUpdateWithoutInventoryInput>
-}
-
 export type ProductCreateNestedOneWithoutCartItemsInput = {
   create?: Prisma.XOR<Prisma.ProductCreateWithoutCartItemsInput, Prisma.ProductUncheckedCreateWithoutCartItemsInput>
   connectOrCreate?: Prisma.ProductCreateOrConnectWithoutCartItemsInput
@@ -1087,46 +975,46 @@ export type ProductUpdateOneRequiredWithoutCartItemsNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.ProductUpdateToOneWithWhereWithoutCartItemsInput, Prisma.ProductUpdateWithoutCartItemsInput>, Prisma.ProductUncheckedUpdateWithoutCartItemsInput>
 }
 
-export type ProductCreateNestedOneWithoutWishlistInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutWishlistInput, Prisma.ProductUncheckedCreateWithoutWishlistInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutWishlistInput
-  connect?: Prisma.ProductWhereUniqueInput
+export type ProductCreateNestedManyWithoutCategoryInput = {
+  create?: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput> | Prisma.ProductCreateWithoutCategoryInput[] | Prisma.ProductUncheckedCreateWithoutCategoryInput[]
+  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutCategoryInput | Prisma.ProductCreateOrConnectWithoutCategoryInput[]
+  createMany?: Prisma.ProductCreateManyCategoryInputEnvelope
+  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
 }
 
-export type ProductUpdateOneRequiredWithoutWishlistNestedInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutWishlistInput, Prisma.ProductUncheckedCreateWithoutWishlistInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutWishlistInput
-  upsert?: Prisma.ProductUpsertWithoutWishlistInput
-  connect?: Prisma.ProductWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.ProductUpdateToOneWithWhereWithoutWishlistInput, Prisma.ProductUpdateWithoutWishlistInput>, Prisma.ProductUncheckedUpdateWithoutWishlistInput>
+export type ProductUncheckedCreateNestedManyWithoutCategoryInput = {
+  create?: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput> | Prisma.ProductCreateWithoutCategoryInput[] | Prisma.ProductUncheckedCreateWithoutCategoryInput[]
+  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutCategoryInput | Prisma.ProductCreateOrConnectWithoutCategoryInput[]
+  createMany?: Prisma.ProductCreateManyCategoryInputEnvelope
+  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
 }
 
-export type ProductCreateNestedOneWithoutReviewsInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutReviewsInput, Prisma.ProductUncheckedCreateWithoutReviewsInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutReviewsInput
-  connect?: Prisma.ProductWhereUniqueInput
+export type ProductUpdateManyWithoutCategoryNestedInput = {
+  create?: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput> | Prisma.ProductCreateWithoutCategoryInput[] | Prisma.ProductUncheckedCreateWithoutCategoryInput[]
+  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutCategoryInput | Prisma.ProductCreateOrConnectWithoutCategoryInput[]
+  upsert?: Prisma.ProductUpsertWithWhereUniqueWithoutCategoryInput | Prisma.ProductUpsertWithWhereUniqueWithoutCategoryInput[]
+  createMany?: Prisma.ProductCreateManyCategoryInputEnvelope
+  set?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
+  disconnect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
+  delete?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
+  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
+  update?: Prisma.ProductUpdateWithWhereUniqueWithoutCategoryInput | Prisma.ProductUpdateWithWhereUniqueWithoutCategoryInput[]
+  updateMany?: Prisma.ProductUpdateManyWithWhereWithoutCategoryInput | Prisma.ProductUpdateManyWithWhereWithoutCategoryInput[]
+  deleteMany?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
 }
 
-export type ProductUpdateOneRequiredWithoutReviewsNestedInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutReviewsInput, Prisma.ProductUncheckedCreateWithoutReviewsInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutReviewsInput
-  upsert?: Prisma.ProductUpsertWithoutReviewsInput
-  connect?: Prisma.ProductWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.ProductUpdateToOneWithWhereWithoutReviewsInput, Prisma.ProductUpdateWithoutReviewsInput>, Prisma.ProductUncheckedUpdateWithoutReviewsInput>
-}
-
-export type ProductCreateNestedOneWithoutOrderItemsInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutOrderItemsInput, Prisma.ProductUncheckedCreateWithoutOrderItemsInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutOrderItemsInput
-  connect?: Prisma.ProductWhereUniqueInput
-}
-
-export type ProductUpdateOneRequiredWithoutOrderItemsNestedInput = {
-  create?: Prisma.XOR<Prisma.ProductCreateWithoutOrderItemsInput, Prisma.ProductUncheckedCreateWithoutOrderItemsInput>
-  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutOrderItemsInput
-  upsert?: Prisma.ProductUpsertWithoutOrderItemsInput
-  connect?: Prisma.ProductWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.ProductUpdateToOneWithWhereWithoutOrderItemsInput, Prisma.ProductUpdateWithoutOrderItemsInput>, Prisma.ProductUncheckedUpdateWithoutOrderItemsInput>
+export type ProductUncheckedUpdateManyWithoutCategoryNestedInput = {
+  create?: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput> | Prisma.ProductCreateWithoutCategoryInput[] | Prisma.ProductUncheckedCreateWithoutCategoryInput[]
+  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutCategoryInput | Prisma.ProductCreateOrConnectWithoutCategoryInput[]
+  upsert?: Prisma.ProductUpsertWithWhereUniqueWithoutCategoryInput | Prisma.ProductUpsertWithWhereUniqueWithoutCategoryInput[]
+  createMany?: Prisma.ProductCreateManyCategoryInputEnvelope
+  set?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
+  disconnect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
+  delete?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
+  connect?: Prisma.ProductWhereUniqueInput | Prisma.ProductWhereUniqueInput[]
+  update?: Prisma.ProductUpdateWithWhereUniqueWithoutCategoryInput | Prisma.ProductUpdateWithWhereUniqueWithoutCategoryInput[]
+  updateMany?: Prisma.ProductUpdateManyWithWhereWithoutCategoryInput | Prisma.ProductUpdateManyWithWhereWithoutCategoryInput[]
+  deleteMany?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
 }
 
 export type ProductCreateNestedOneWithoutFlashSaleItemsInput = {
@@ -1143,135 +1031,92 @@ export type ProductUpdateOneRequiredWithoutFlashSaleItemsNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.ProductUpdateToOneWithWhereWithoutFlashSaleItemsInput, Prisma.ProductUpdateWithoutFlashSaleItemsInput>, Prisma.ProductUncheckedUpdateWithoutFlashSaleItemsInput>
 }
 
-export type ProductCreateWithoutCategoryInput = {
-  id?: string
-  name: string
-  slug: string
-  description: string
-  shortDescription?: string | null
-  sku: string
-  price: number
-  comparePrice?: number | null
-  costPrice?: number | null
-  images?: Prisma.ProductCreateimagesInput | string[]
-  thumbnail?: string | null
-  isActive?: boolean
-  isFeatured?: boolean
-  isNewArrival?: boolean
-  isBestSeller?: boolean
-  weight?: number | null
-  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  metaTitle?: string | null
-  metaDescription?: string | null
-  metaKeywords?: Prisma.ProductCreatemetaKeywordsInput | string[]
-  totalSold?: number
-  avgRating?: number
-  totalReviews?: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  brand?: Prisma.BrandCreateNestedOneWithoutProductsInput
-  inventory?: Prisma.InventoryCreateNestedOneWithoutProductInput
-  tags?: Prisma.ProductTagCreateNestedManyWithoutProductInput
-  reviews?: Prisma.ReviewCreateNestedManyWithoutProductInput
-  cartItems?: Prisma.CartItemCreateNestedManyWithoutProductInput
-  orderItems?: Prisma.OrderItemCreateNestedManyWithoutProductInput
-  wishlist?: Prisma.WishlistCreateNestedManyWithoutProductInput
-  flashSaleItems?: Prisma.FlashSaleItemCreateNestedManyWithoutProductInput
+export type ProductCreateNestedOneWithoutInventoryInput = {
+  create?: Prisma.XOR<Prisma.ProductCreateWithoutInventoryInput, Prisma.ProductUncheckedCreateWithoutInventoryInput>
+  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutInventoryInput
+  connect?: Prisma.ProductWhereUniqueInput
 }
 
-export type ProductUncheckedCreateWithoutCategoryInput = {
-  id?: string
-  name: string
-  slug: string
-  description: string
-  shortDescription?: string | null
-  sku: string
-  price: number
-  comparePrice?: number | null
-  costPrice?: number | null
-  brandId?: string | null
-  images?: Prisma.ProductCreateimagesInput | string[]
-  thumbnail?: string | null
-  isActive?: boolean
-  isFeatured?: boolean
-  isNewArrival?: boolean
-  isBestSeller?: boolean
-  weight?: number | null
-  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  metaTitle?: string | null
-  metaDescription?: string | null
-  metaKeywords?: Prisma.ProductCreatemetaKeywordsInput | string[]
-  totalSold?: number
-  avgRating?: number
-  totalReviews?: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  inventory?: Prisma.InventoryUncheckedCreateNestedOneWithoutProductInput
-  tags?: Prisma.ProductTagUncheckedCreateNestedManyWithoutProductInput
-  reviews?: Prisma.ReviewUncheckedCreateNestedManyWithoutProductInput
-  cartItems?: Prisma.CartItemUncheckedCreateNestedManyWithoutProductInput
-  orderItems?: Prisma.OrderItemUncheckedCreateNestedManyWithoutProductInput
-  wishlist?: Prisma.WishlistUncheckedCreateNestedManyWithoutProductInput
-  flashSaleItems?: Prisma.FlashSaleItemUncheckedCreateNestedManyWithoutProductInput
+export type ProductUpdateOneRequiredWithoutInventoryNestedInput = {
+  create?: Prisma.XOR<Prisma.ProductCreateWithoutInventoryInput, Prisma.ProductUncheckedCreateWithoutInventoryInput>
+  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutInventoryInput
+  upsert?: Prisma.ProductUpsertWithoutInventoryInput
+  connect?: Prisma.ProductWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.ProductUpdateToOneWithWhereWithoutInventoryInput, Prisma.ProductUpdateWithoutInventoryInput>, Prisma.ProductUncheckedUpdateWithoutInventoryInput>
 }
 
-export type ProductCreateOrConnectWithoutCategoryInput = {
-  where: Prisma.ProductWhereUniqueInput
-  create: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput>
+export type ProductCreateNestedOneWithoutOrderItemsInput = {
+  create?: Prisma.XOR<Prisma.ProductCreateWithoutOrderItemsInput, Prisma.ProductUncheckedCreateWithoutOrderItemsInput>
+  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutOrderItemsInput
+  connect?: Prisma.ProductWhereUniqueInput
 }
 
-export type ProductCreateManyCategoryInputEnvelope = {
-  data: Prisma.ProductCreateManyCategoryInput | Prisma.ProductCreateManyCategoryInput[]
-  skipDuplicates?: boolean
+export type ProductUpdateOneRequiredWithoutOrderItemsNestedInput = {
+  create?: Prisma.XOR<Prisma.ProductCreateWithoutOrderItemsInput, Prisma.ProductUncheckedCreateWithoutOrderItemsInput>
+  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutOrderItemsInput
+  upsert?: Prisma.ProductUpsertWithoutOrderItemsInput
+  connect?: Prisma.ProductWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.ProductUpdateToOneWithWhereWithoutOrderItemsInput, Prisma.ProductUpdateWithoutOrderItemsInput>, Prisma.ProductUncheckedUpdateWithoutOrderItemsInput>
 }
 
-export type ProductUpsertWithWhereUniqueWithoutCategoryInput = {
-  where: Prisma.ProductWhereUniqueInput
-  update: Prisma.XOR<Prisma.ProductUpdateWithoutCategoryInput, Prisma.ProductUncheckedUpdateWithoutCategoryInput>
-  create: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput>
+export type ProductCreateimagesInput = {
+  set: string[]
 }
 
-export type ProductUpdateWithWhereUniqueWithoutCategoryInput = {
-  where: Prisma.ProductWhereUniqueInput
-  data: Prisma.XOR<Prisma.ProductUpdateWithoutCategoryInput, Prisma.ProductUncheckedUpdateWithoutCategoryInput>
+export type ProductCreatemetaKeywordsInput = {
+  set: string[]
 }
 
-export type ProductUpdateManyWithWhereWithoutCategoryInput = {
-  where: Prisma.ProductScalarWhereInput
-  data: Prisma.XOR<Prisma.ProductUpdateManyMutationInput, Prisma.ProductUncheckedUpdateManyWithoutCategoryInput>
+export type ProductUpdateimagesInput = {
+  set?: string[]
+  push?: string | string[]
 }
 
-export type ProductScalarWhereInput = {
-  AND?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
-  OR?: Prisma.ProductScalarWhereInput[]
-  NOT?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
-  id?: Prisma.StringFilter<"Product"> | string
-  name?: Prisma.StringFilter<"Product"> | string
-  slug?: Prisma.StringFilter<"Product"> | string
-  description?: Prisma.StringFilter<"Product"> | string
-  shortDescription?: Prisma.StringNullableFilter<"Product"> | string | null
-  sku?: Prisma.StringFilter<"Product"> | string
-  price?: Prisma.FloatFilter<"Product"> | number
-  comparePrice?: Prisma.FloatNullableFilter<"Product"> | number | null
-  costPrice?: Prisma.FloatNullableFilter<"Product"> | number | null
-  categoryId?: Prisma.StringFilter<"Product"> | string
-  brandId?: Prisma.StringNullableFilter<"Product"> | string | null
-  images?: Prisma.StringNullableListFilter<"Product">
-  thumbnail?: Prisma.StringNullableFilter<"Product"> | string | null
-  isActive?: Prisma.BoolFilter<"Product"> | boolean
-  isFeatured?: Prisma.BoolFilter<"Product"> | boolean
-  isNewArrival?: Prisma.BoolFilter<"Product"> | boolean
-  isBestSeller?: Prisma.BoolFilter<"Product"> | boolean
-  weight?: Prisma.FloatNullableFilter<"Product"> | number | null
-  dimensions?: Prisma.JsonNullableFilter<"Product">
-  metaTitle?: Prisma.StringNullableFilter<"Product"> | string | null
-  metaDescription?: Prisma.StringNullableFilter<"Product"> | string | null
-  metaKeywords?: Prisma.StringNullableListFilter<"Product">
-  totalSold?: Prisma.IntFilter<"Product"> | number
-  avgRating?: Prisma.FloatFilter<"Product"> | number
-  totalReviews?: Prisma.IntFilter<"Product"> | number
-  createdAt?: Prisma.DateTimeFilter<"Product"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"Product"> | Date | string
+export type ProductUpdatemetaKeywordsInput = {
+  set?: string[]
+  push?: string | string[]
+}
+
+export type ProductCreateNestedOneWithoutReviewsInput = {
+  create?: Prisma.XOR<Prisma.ProductCreateWithoutReviewsInput, Prisma.ProductUncheckedCreateWithoutReviewsInput>
+  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutReviewsInput
+  connect?: Prisma.ProductWhereUniqueInput
+}
+
+export type ProductUpdateOneRequiredWithoutReviewsNestedInput = {
+  create?: Prisma.XOR<Prisma.ProductCreateWithoutReviewsInput, Prisma.ProductUncheckedCreateWithoutReviewsInput>
+  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutReviewsInput
+  upsert?: Prisma.ProductUpsertWithoutReviewsInput
+  connect?: Prisma.ProductWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.ProductUpdateToOneWithWhereWithoutReviewsInput, Prisma.ProductUpdateWithoutReviewsInput>, Prisma.ProductUncheckedUpdateWithoutReviewsInput>
+}
+
+export type ProductCreateNestedOneWithoutTagsInput = {
+  create?: Prisma.XOR<Prisma.ProductCreateWithoutTagsInput, Prisma.ProductUncheckedCreateWithoutTagsInput>
+  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutTagsInput
+  connect?: Prisma.ProductWhereUniqueInput
+}
+
+export type ProductUpdateOneRequiredWithoutTagsNestedInput = {
+  create?: Prisma.XOR<Prisma.ProductCreateWithoutTagsInput, Prisma.ProductUncheckedCreateWithoutTagsInput>
+  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutTagsInput
+  upsert?: Prisma.ProductUpsertWithoutTagsInput
+  connect?: Prisma.ProductWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.ProductUpdateToOneWithWhereWithoutTagsInput, Prisma.ProductUpdateWithoutTagsInput>, Prisma.ProductUncheckedUpdateWithoutTagsInput>
+}
+
+export type ProductCreateNestedOneWithoutWishlistInput = {
+  create?: Prisma.XOR<Prisma.ProductCreateWithoutWishlistInput, Prisma.ProductUncheckedCreateWithoutWishlistInput>
+  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutWishlistInput
+  connect?: Prisma.ProductWhereUniqueInput
+}
+
+export type ProductUpdateOneRequiredWithoutWishlistNestedInput = {
+  create?: Prisma.XOR<Prisma.ProductCreateWithoutWishlistInput, Prisma.ProductUncheckedCreateWithoutWishlistInput>
+  connectOrCreate?: Prisma.ProductCreateOrConnectWithoutWishlistInput
+  upsert?: Prisma.ProductUpsertWithoutWishlistInput
+  connect?: Prisma.ProductWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.ProductUpdateToOneWithWhereWithoutWishlistInput, Prisma.ProductUpdateWithoutWishlistInput>, Prisma.ProductUncheckedUpdateWithoutWishlistInput>
 }
 
 export type ProductCreateWithoutBrandInput = {
@@ -1372,324 +1217,37 @@ export type ProductUpdateManyWithWhereWithoutBrandInput = {
   data: Prisma.XOR<Prisma.ProductUpdateManyMutationInput, Prisma.ProductUncheckedUpdateManyWithoutBrandInput>
 }
 
-export type ProductCreateWithoutTagsInput = {
-  id?: string
-  name: string
-  slug: string
-  description: string
-  shortDescription?: string | null
-  sku: string
-  price: number
-  comparePrice?: number | null
-  costPrice?: number | null
-  images?: Prisma.ProductCreateimagesInput | string[]
-  thumbnail?: string | null
-  isActive?: boolean
-  isFeatured?: boolean
-  isNewArrival?: boolean
-  isBestSeller?: boolean
-  weight?: number | null
-  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  metaTitle?: string | null
-  metaDescription?: string | null
-  metaKeywords?: Prisma.ProductCreatemetaKeywordsInput | string[]
-  totalSold?: number
-  avgRating?: number
-  totalReviews?: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  category: Prisma.CategoryCreateNestedOneWithoutProductsInput
-  brand?: Prisma.BrandCreateNestedOneWithoutProductsInput
-  inventory?: Prisma.InventoryCreateNestedOneWithoutProductInput
-  reviews?: Prisma.ReviewCreateNestedManyWithoutProductInput
-  cartItems?: Prisma.CartItemCreateNestedManyWithoutProductInput
-  orderItems?: Prisma.OrderItemCreateNestedManyWithoutProductInput
-  wishlist?: Prisma.WishlistCreateNestedManyWithoutProductInput
-  flashSaleItems?: Prisma.FlashSaleItemCreateNestedManyWithoutProductInput
-}
-
-export type ProductUncheckedCreateWithoutTagsInput = {
-  id?: string
-  name: string
-  slug: string
-  description: string
-  shortDescription?: string | null
-  sku: string
-  price: number
-  comparePrice?: number | null
-  costPrice?: number | null
-  categoryId: string
-  brandId?: string | null
-  images?: Prisma.ProductCreateimagesInput | string[]
-  thumbnail?: string | null
-  isActive?: boolean
-  isFeatured?: boolean
-  isNewArrival?: boolean
-  isBestSeller?: boolean
-  weight?: number | null
-  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  metaTitle?: string | null
-  metaDescription?: string | null
-  metaKeywords?: Prisma.ProductCreatemetaKeywordsInput | string[]
-  totalSold?: number
-  avgRating?: number
-  totalReviews?: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  inventory?: Prisma.InventoryUncheckedCreateNestedOneWithoutProductInput
-  reviews?: Prisma.ReviewUncheckedCreateNestedManyWithoutProductInput
-  cartItems?: Prisma.CartItemUncheckedCreateNestedManyWithoutProductInput
-  orderItems?: Prisma.OrderItemUncheckedCreateNestedManyWithoutProductInput
-  wishlist?: Prisma.WishlistUncheckedCreateNestedManyWithoutProductInput
-  flashSaleItems?: Prisma.FlashSaleItemUncheckedCreateNestedManyWithoutProductInput
-}
-
-export type ProductCreateOrConnectWithoutTagsInput = {
-  where: Prisma.ProductWhereUniqueInput
-  create: Prisma.XOR<Prisma.ProductCreateWithoutTagsInput, Prisma.ProductUncheckedCreateWithoutTagsInput>
-}
-
-export type ProductUpsertWithoutTagsInput = {
-  update: Prisma.XOR<Prisma.ProductUpdateWithoutTagsInput, Prisma.ProductUncheckedUpdateWithoutTagsInput>
-  create: Prisma.XOR<Prisma.ProductCreateWithoutTagsInput, Prisma.ProductUncheckedCreateWithoutTagsInput>
-  where?: Prisma.ProductWhereInput
-}
-
-export type ProductUpdateToOneWithWhereWithoutTagsInput = {
-  where?: Prisma.ProductWhereInput
-  data: Prisma.XOR<Prisma.ProductUpdateWithoutTagsInput, Prisma.ProductUncheckedUpdateWithoutTagsInput>
-}
-
-export type ProductUpdateWithoutTagsInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  slug?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  shortDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sku?: Prisma.StringFieldUpdateOperationsInput | string
-  price?: Prisma.FloatFieldUpdateOperationsInput | number
-  comparePrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  costPrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  images?: Prisma.ProductUpdateimagesInput | string[]
-  thumbnail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isFeatured?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isNewArrival?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isBestSeller?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  weight?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  metaTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  metaDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  metaKeywords?: Prisma.ProductUpdatemetaKeywordsInput | string[]
-  totalSold?: Prisma.IntFieldUpdateOperationsInput | number
-  avgRating?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalReviews?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  category?: Prisma.CategoryUpdateOneRequiredWithoutProductsNestedInput
-  brand?: Prisma.BrandUpdateOneWithoutProductsNestedInput
-  inventory?: Prisma.InventoryUpdateOneWithoutProductNestedInput
-  reviews?: Prisma.ReviewUpdateManyWithoutProductNestedInput
-  cartItems?: Prisma.CartItemUpdateManyWithoutProductNestedInput
-  orderItems?: Prisma.OrderItemUpdateManyWithoutProductNestedInput
-  wishlist?: Prisma.WishlistUpdateManyWithoutProductNestedInput
-  flashSaleItems?: Prisma.FlashSaleItemUpdateManyWithoutProductNestedInput
-}
-
-export type ProductUncheckedUpdateWithoutTagsInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  slug?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  shortDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sku?: Prisma.StringFieldUpdateOperationsInput | string
-  price?: Prisma.FloatFieldUpdateOperationsInput | number
-  comparePrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  costPrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  categoryId?: Prisma.StringFieldUpdateOperationsInput | string
-  brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  images?: Prisma.ProductUpdateimagesInput | string[]
-  thumbnail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isFeatured?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isNewArrival?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isBestSeller?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  weight?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  metaTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  metaDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  metaKeywords?: Prisma.ProductUpdatemetaKeywordsInput | string[]
-  totalSold?: Prisma.IntFieldUpdateOperationsInput | number
-  avgRating?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalReviews?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  inventory?: Prisma.InventoryUncheckedUpdateOneWithoutProductNestedInput
-  reviews?: Prisma.ReviewUncheckedUpdateManyWithoutProductNestedInput
-  cartItems?: Prisma.CartItemUncheckedUpdateManyWithoutProductNestedInput
-  orderItems?: Prisma.OrderItemUncheckedUpdateManyWithoutProductNestedInput
-  wishlist?: Prisma.WishlistUncheckedUpdateManyWithoutProductNestedInput
-  flashSaleItems?: Prisma.FlashSaleItemUncheckedUpdateManyWithoutProductNestedInput
-}
-
-export type ProductCreateWithoutInventoryInput = {
-  id?: string
-  name: string
-  slug: string
-  description: string
-  shortDescription?: string | null
-  sku: string
-  price: number
-  comparePrice?: number | null
-  costPrice?: number | null
-  images?: Prisma.ProductCreateimagesInput | string[]
-  thumbnail?: string | null
-  isActive?: boolean
-  isFeatured?: boolean
-  isNewArrival?: boolean
-  isBestSeller?: boolean
-  weight?: number | null
-  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  metaTitle?: string | null
-  metaDescription?: string | null
-  metaKeywords?: Prisma.ProductCreatemetaKeywordsInput | string[]
-  totalSold?: number
-  avgRating?: number
-  totalReviews?: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  category: Prisma.CategoryCreateNestedOneWithoutProductsInput
-  brand?: Prisma.BrandCreateNestedOneWithoutProductsInput
-  tags?: Prisma.ProductTagCreateNestedManyWithoutProductInput
-  reviews?: Prisma.ReviewCreateNestedManyWithoutProductInput
-  cartItems?: Prisma.CartItemCreateNestedManyWithoutProductInput
-  orderItems?: Prisma.OrderItemCreateNestedManyWithoutProductInput
-  wishlist?: Prisma.WishlistCreateNestedManyWithoutProductInput
-  flashSaleItems?: Prisma.FlashSaleItemCreateNestedManyWithoutProductInput
-}
-
-export type ProductUncheckedCreateWithoutInventoryInput = {
-  id?: string
-  name: string
-  slug: string
-  description: string
-  shortDescription?: string | null
-  sku: string
-  price: number
-  comparePrice?: number | null
-  costPrice?: number | null
-  categoryId: string
-  brandId?: string | null
-  images?: Prisma.ProductCreateimagesInput | string[]
-  thumbnail?: string | null
-  isActive?: boolean
-  isFeatured?: boolean
-  isNewArrival?: boolean
-  isBestSeller?: boolean
-  weight?: number | null
-  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  metaTitle?: string | null
-  metaDescription?: string | null
-  metaKeywords?: Prisma.ProductCreatemetaKeywordsInput | string[]
-  totalSold?: number
-  avgRating?: number
-  totalReviews?: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  tags?: Prisma.ProductTagUncheckedCreateNestedManyWithoutProductInput
-  reviews?: Prisma.ReviewUncheckedCreateNestedManyWithoutProductInput
-  cartItems?: Prisma.CartItemUncheckedCreateNestedManyWithoutProductInput
-  orderItems?: Prisma.OrderItemUncheckedCreateNestedManyWithoutProductInput
-  wishlist?: Prisma.WishlistUncheckedCreateNestedManyWithoutProductInput
-  flashSaleItems?: Prisma.FlashSaleItemUncheckedCreateNestedManyWithoutProductInput
-}
-
-export type ProductCreateOrConnectWithoutInventoryInput = {
-  where: Prisma.ProductWhereUniqueInput
-  create: Prisma.XOR<Prisma.ProductCreateWithoutInventoryInput, Prisma.ProductUncheckedCreateWithoutInventoryInput>
-}
-
-export type ProductUpsertWithoutInventoryInput = {
-  update: Prisma.XOR<Prisma.ProductUpdateWithoutInventoryInput, Prisma.ProductUncheckedUpdateWithoutInventoryInput>
-  create: Prisma.XOR<Prisma.ProductCreateWithoutInventoryInput, Prisma.ProductUncheckedCreateWithoutInventoryInput>
-  where?: Prisma.ProductWhereInput
-}
-
-export type ProductUpdateToOneWithWhereWithoutInventoryInput = {
-  where?: Prisma.ProductWhereInput
-  data: Prisma.XOR<Prisma.ProductUpdateWithoutInventoryInput, Prisma.ProductUncheckedUpdateWithoutInventoryInput>
-}
-
-export type ProductUpdateWithoutInventoryInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  slug?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  shortDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sku?: Prisma.StringFieldUpdateOperationsInput | string
-  price?: Prisma.FloatFieldUpdateOperationsInput | number
-  comparePrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  costPrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  images?: Prisma.ProductUpdateimagesInput | string[]
-  thumbnail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isFeatured?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isNewArrival?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isBestSeller?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  weight?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  metaTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  metaDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  metaKeywords?: Prisma.ProductUpdatemetaKeywordsInput | string[]
-  totalSold?: Prisma.IntFieldUpdateOperationsInput | number
-  avgRating?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalReviews?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  category?: Prisma.CategoryUpdateOneRequiredWithoutProductsNestedInput
-  brand?: Prisma.BrandUpdateOneWithoutProductsNestedInput
-  tags?: Prisma.ProductTagUpdateManyWithoutProductNestedInput
-  reviews?: Prisma.ReviewUpdateManyWithoutProductNestedInput
-  cartItems?: Prisma.CartItemUpdateManyWithoutProductNestedInput
-  orderItems?: Prisma.OrderItemUpdateManyWithoutProductNestedInput
-  wishlist?: Prisma.WishlistUpdateManyWithoutProductNestedInput
-  flashSaleItems?: Prisma.FlashSaleItemUpdateManyWithoutProductNestedInput
-}
-
-export type ProductUncheckedUpdateWithoutInventoryInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  slug?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  shortDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sku?: Prisma.StringFieldUpdateOperationsInput | string
-  price?: Prisma.FloatFieldUpdateOperationsInput | number
-  comparePrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  costPrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  categoryId?: Prisma.StringFieldUpdateOperationsInput | string
-  brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  images?: Prisma.ProductUpdateimagesInput | string[]
-  thumbnail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isFeatured?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isNewArrival?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isBestSeller?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  weight?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  metaTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  metaDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  metaKeywords?: Prisma.ProductUpdatemetaKeywordsInput | string[]
-  totalSold?: Prisma.IntFieldUpdateOperationsInput | number
-  avgRating?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalReviews?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  tags?: Prisma.ProductTagUncheckedUpdateManyWithoutProductNestedInput
-  reviews?: Prisma.ReviewUncheckedUpdateManyWithoutProductNestedInput
-  cartItems?: Prisma.CartItemUncheckedUpdateManyWithoutProductNestedInput
-  orderItems?: Prisma.OrderItemUncheckedUpdateManyWithoutProductNestedInput
-  wishlist?: Prisma.WishlistUncheckedUpdateManyWithoutProductNestedInput
-  flashSaleItems?: Prisma.FlashSaleItemUncheckedUpdateManyWithoutProductNestedInput
+export type ProductScalarWhereInput = {
+  AND?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
+  OR?: Prisma.ProductScalarWhereInput[]
+  NOT?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[]
+  id?: Prisma.StringFilter<"Product"> | string
+  name?: Prisma.StringFilter<"Product"> | string
+  slug?: Prisma.StringFilter<"Product"> | string
+  description?: Prisma.StringFilter<"Product"> | string
+  shortDescription?: Prisma.StringNullableFilter<"Product"> | string | null
+  sku?: Prisma.StringFilter<"Product"> | string
+  price?: Prisma.FloatFilter<"Product"> | number
+  comparePrice?: Prisma.FloatNullableFilter<"Product"> | number | null
+  costPrice?: Prisma.FloatNullableFilter<"Product"> | number | null
+  categoryId?: Prisma.StringFilter<"Product"> | string
+  brandId?: Prisma.StringNullableFilter<"Product"> | string | null
+  images?: Prisma.StringNullableListFilter<"Product">
+  thumbnail?: Prisma.StringNullableFilter<"Product"> | string | null
+  isActive?: Prisma.BoolFilter<"Product"> | boolean
+  isFeatured?: Prisma.BoolFilter<"Product"> | boolean
+  isNewArrival?: Prisma.BoolFilter<"Product"> | boolean
+  isBestSeller?: Prisma.BoolFilter<"Product"> | boolean
+  weight?: Prisma.FloatNullableFilter<"Product"> | number | null
+  dimensions?: Prisma.JsonNullableFilter<"Product">
+  metaTitle?: Prisma.StringNullableFilter<"Product"> | string | null
+  metaDescription?: Prisma.StringNullableFilter<"Product"> | string | null
+  metaKeywords?: Prisma.StringNullableListFilter<"Product">
+  totalSold?: Prisma.IntFilter<"Product"> | number
+  avgRating?: Prisma.FloatFilter<"Product"> | number
+  totalReviews?: Prisma.IntFilter<"Product"> | number
+  createdAt?: Prisma.DateTimeFilter<"Product"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"Product"> | Date | string
 }
 
 export type ProductCreateWithoutCartItemsInput = {
@@ -1852,7 +1410,105 @@ export type ProductUncheckedUpdateWithoutCartItemsInput = {
   flashSaleItems?: Prisma.FlashSaleItemUncheckedUpdateManyWithoutProductNestedInput
 }
 
-export type ProductCreateWithoutWishlistInput = {
+export type ProductCreateWithoutCategoryInput = {
+  id?: string
+  name: string
+  slug: string
+  description: string
+  shortDescription?: string | null
+  sku: string
+  price: number
+  comparePrice?: number | null
+  costPrice?: number | null
+  images?: Prisma.ProductCreateimagesInput | string[]
+  thumbnail?: string | null
+  isActive?: boolean
+  isFeatured?: boolean
+  isNewArrival?: boolean
+  isBestSeller?: boolean
+  weight?: number | null
+  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  metaTitle?: string | null
+  metaDescription?: string | null
+  metaKeywords?: Prisma.ProductCreatemetaKeywordsInput | string[]
+  totalSold?: number
+  avgRating?: number
+  totalReviews?: number
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  brand?: Prisma.BrandCreateNestedOneWithoutProductsInput
+  inventory?: Prisma.InventoryCreateNestedOneWithoutProductInput
+  tags?: Prisma.ProductTagCreateNestedManyWithoutProductInput
+  reviews?: Prisma.ReviewCreateNestedManyWithoutProductInput
+  cartItems?: Prisma.CartItemCreateNestedManyWithoutProductInput
+  orderItems?: Prisma.OrderItemCreateNestedManyWithoutProductInput
+  wishlist?: Prisma.WishlistCreateNestedManyWithoutProductInput
+  flashSaleItems?: Prisma.FlashSaleItemCreateNestedManyWithoutProductInput
+}
+
+export type ProductUncheckedCreateWithoutCategoryInput = {
+  id?: string
+  name: string
+  slug: string
+  description: string
+  shortDescription?: string | null
+  sku: string
+  price: number
+  comparePrice?: number | null
+  costPrice?: number | null
+  brandId?: string | null
+  images?: Prisma.ProductCreateimagesInput | string[]
+  thumbnail?: string | null
+  isActive?: boolean
+  isFeatured?: boolean
+  isNewArrival?: boolean
+  isBestSeller?: boolean
+  weight?: number | null
+  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  metaTitle?: string | null
+  metaDescription?: string | null
+  metaKeywords?: Prisma.ProductCreatemetaKeywordsInput | string[]
+  totalSold?: number
+  avgRating?: number
+  totalReviews?: number
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  inventory?: Prisma.InventoryUncheckedCreateNestedOneWithoutProductInput
+  tags?: Prisma.ProductTagUncheckedCreateNestedManyWithoutProductInput
+  reviews?: Prisma.ReviewUncheckedCreateNestedManyWithoutProductInput
+  cartItems?: Prisma.CartItemUncheckedCreateNestedManyWithoutProductInput
+  orderItems?: Prisma.OrderItemUncheckedCreateNestedManyWithoutProductInput
+  wishlist?: Prisma.WishlistUncheckedCreateNestedManyWithoutProductInput
+  flashSaleItems?: Prisma.FlashSaleItemUncheckedCreateNestedManyWithoutProductInput
+}
+
+export type ProductCreateOrConnectWithoutCategoryInput = {
+  where: Prisma.ProductWhereUniqueInput
+  create: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput>
+}
+
+export type ProductCreateManyCategoryInputEnvelope = {
+  data: Prisma.ProductCreateManyCategoryInput | Prisma.ProductCreateManyCategoryInput[]
+  skipDuplicates?: boolean
+}
+
+export type ProductUpsertWithWhereUniqueWithoutCategoryInput = {
+  where: Prisma.ProductWhereUniqueInput
+  update: Prisma.XOR<Prisma.ProductUpdateWithoutCategoryInput, Prisma.ProductUncheckedUpdateWithoutCategoryInput>
+  create: Prisma.XOR<Prisma.ProductCreateWithoutCategoryInput, Prisma.ProductUncheckedCreateWithoutCategoryInput>
+}
+
+export type ProductUpdateWithWhereUniqueWithoutCategoryInput = {
+  where: Prisma.ProductWhereUniqueInput
+  data: Prisma.XOR<Prisma.ProductUpdateWithoutCategoryInput, Prisma.ProductUncheckedUpdateWithoutCategoryInput>
+}
+
+export type ProductUpdateManyWithWhereWithoutCategoryInput = {
+  where: Prisma.ProductScalarWhereInput
+  data: Prisma.XOR<Prisma.ProductUpdateManyMutationInput, Prisma.ProductUncheckedUpdateManyWithoutCategoryInput>
+}
+
+export type ProductCreateWithoutFlashSaleItemsInput = {
   id?: string
   name: string
   slug: string
@@ -1885,10 +1541,10 @@ export type ProductCreateWithoutWishlistInput = {
   reviews?: Prisma.ReviewCreateNestedManyWithoutProductInput
   cartItems?: Prisma.CartItemCreateNestedManyWithoutProductInput
   orderItems?: Prisma.OrderItemCreateNestedManyWithoutProductInput
-  flashSaleItems?: Prisma.FlashSaleItemCreateNestedManyWithoutProductInput
+  wishlist?: Prisma.WishlistCreateNestedManyWithoutProductInput
 }
 
-export type ProductUncheckedCreateWithoutWishlistInput = {
+export type ProductUncheckedCreateWithoutFlashSaleItemsInput = {
   id?: string
   name: string
   slug: string
@@ -1921,26 +1577,26 @@ export type ProductUncheckedCreateWithoutWishlistInput = {
   reviews?: Prisma.ReviewUncheckedCreateNestedManyWithoutProductInput
   cartItems?: Prisma.CartItemUncheckedCreateNestedManyWithoutProductInput
   orderItems?: Prisma.OrderItemUncheckedCreateNestedManyWithoutProductInput
-  flashSaleItems?: Prisma.FlashSaleItemUncheckedCreateNestedManyWithoutProductInput
+  wishlist?: Prisma.WishlistUncheckedCreateNestedManyWithoutProductInput
 }
 
-export type ProductCreateOrConnectWithoutWishlistInput = {
+export type ProductCreateOrConnectWithoutFlashSaleItemsInput = {
   where: Prisma.ProductWhereUniqueInput
-  create: Prisma.XOR<Prisma.ProductCreateWithoutWishlistInput, Prisma.ProductUncheckedCreateWithoutWishlistInput>
+  create: Prisma.XOR<Prisma.ProductCreateWithoutFlashSaleItemsInput, Prisma.ProductUncheckedCreateWithoutFlashSaleItemsInput>
 }
 
-export type ProductUpsertWithoutWishlistInput = {
-  update: Prisma.XOR<Prisma.ProductUpdateWithoutWishlistInput, Prisma.ProductUncheckedUpdateWithoutWishlistInput>
-  create: Prisma.XOR<Prisma.ProductCreateWithoutWishlistInput, Prisma.ProductUncheckedCreateWithoutWishlistInput>
+export type ProductUpsertWithoutFlashSaleItemsInput = {
+  update: Prisma.XOR<Prisma.ProductUpdateWithoutFlashSaleItemsInput, Prisma.ProductUncheckedUpdateWithoutFlashSaleItemsInput>
+  create: Prisma.XOR<Prisma.ProductCreateWithoutFlashSaleItemsInput, Prisma.ProductUncheckedCreateWithoutFlashSaleItemsInput>
   where?: Prisma.ProductWhereInput
 }
 
-export type ProductUpdateToOneWithWhereWithoutWishlistInput = {
+export type ProductUpdateToOneWithWhereWithoutFlashSaleItemsInput = {
   where?: Prisma.ProductWhereInput
-  data: Prisma.XOR<Prisma.ProductUpdateWithoutWishlistInput, Prisma.ProductUncheckedUpdateWithoutWishlistInput>
+  data: Prisma.XOR<Prisma.ProductUpdateWithoutFlashSaleItemsInput, Prisma.ProductUncheckedUpdateWithoutFlashSaleItemsInput>
 }
 
-export type ProductUpdateWithoutWishlistInput = {
+export type ProductUpdateWithoutFlashSaleItemsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1973,10 +1629,10 @@ export type ProductUpdateWithoutWishlistInput = {
   reviews?: Prisma.ReviewUpdateManyWithoutProductNestedInput
   cartItems?: Prisma.CartItemUpdateManyWithoutProductNestedInput
   orderItems?: Prisma.OrderItemUpdateManyWithoutProductNestedInput
-  flashSaleItems?: Prisma.FlashSaleItemUpdateManyWithoutProductNestedInput
+  wishlist?: Prisma.WishlistUpdateManyWithoutProductNestedInput
 }
 
-export type ProductUncheckedUpdateWithoutWishlistInput = {
+export type ProductUncheckedUpdateWithoutFlashSaleItemsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
@@ -2009,10 +1665,10 @@ export type ProductUncheckedUpdateWithoutWishlistInput = {
   reviews?: Prisma.ReviewUncheckedUpdateManyWithoutProductNestedInput
   cartItems?: Prisma.CartItemUncheckedUpdateManyWithoutProductNestedInput
   orderItems?: Prisma.OrderItemUncheckedUpdateManyWithoutProductNestedInput
-  flashSaleItems?: Prisma.FlashSaleItemUncheckedUpdateManyWithoutProductNestedInput
+  wishlist?: Prisma.WishlistUncheckedUpdateManyWithoutProductNestedInput
 }
 
-export type ProductCreateWithoutReviewsInput = {
+export type ProductCreateWithoutInventoryInput = {
   id?: string
   name: string
   slug: string
@@ -2040,15 +1696,15 @@ export type ProductCreateWithoutReviewsInput = {
   updatedAt?: Date | string
   category: Prisma.CategoryCreateNestedOneWithoutProductsInput
   brand?: Prisma.BrandCreateNestedOneWithoutProductsInput
-  inventory?: Prisma.InventoryCreateNestedOneWithoutProductInput
   tags?: Prisma.ProductTagCreateNestedManyWithoutProductInput
+  reviews?: Prisma.ReviewCreateNestedManyWithoutProductInput
   cartItems?: Prisma.CartItemCreateNestedManyWithoutProductInput
   orderItems?: Prisma.OrderItemCreateNestedManyWithoutProductInput
   wishlist?: Prisma.WishlistCreateNestedManyWithoutProductInput
   flashSaleItems?: Prisma.FlashSaleItemCreateNestedManyWithoutProductInput
 }
 
-export type ProductUncheckedCreateWithoutReviewsInput = {
+export type ProductUncheckedCreateWithoutInventoryInput = {
   id?: string
   name: string
   slug: string
@@ -2076,31 +1732,31 @@ export type ProductUncheckedCreateWithoutReviewsInput = {
   totalReviews?: number
   createdAt?: Date | string
   updatedAt?: Date | string
-  inventory?: Prisma.InventoryUncheckedCreateNestedOneWithoutProductInput
   tags?: Prisma.ProductTagUncheckedCreateNestedManyWithoutProductInput
+  reviews?: Prisma.ReviewUncheckedCreateNestedManyWithoutProductInput
   cartItems?: Prisma.CartItemUncheckedCreateNestedManyWithoutProductInput
   orderItems?: Prisma.OrderItemUncheckedCreateNestedManyWithoutProductInput
   wishlist?: Prisma.WishlistUncheckedCreateNestedManyWithoutProductInput
   flashSaleItems?: Prisma.FlashSaleItemUncheckedCreateNestedManyWithoutProductInput
 }
 
-export type ProductCreateOrConnectWithoutReviewsInput = {
+export type ProductCreateOrConnectWithoutInventoryInput = {
   where: Prisma.ProductWhereUniqueInput
-  create: Prisma.XOR<Prisma.ProductCreateWithoutReviewsInput, Prisma.ProductUncheckedCreateWithoutReviewsInput>
+  create: Prisma.XOR<Prisma.ProductCreateWithoutInventoryInput, Prisma.ProductUncheckedCreateWithoutInventoryInput>
 }
 
-export type ProductUpsertWithoutReviewsInput = {
-  update: Prisma.XOR<Prisma.ProductUpdateWithoutReviewsInput, Prisma.ProductUncheckedUpdateWithoutReviewsInput>
-  create: Prisma.XOR<Prisma.ProductCreateWithoutReviewsInput, Prisma.ProductUncheckedCreateWithoutReviewsInput>
+export type ProductUpsertWithoutInventoryInput = {
+  update: Prisma.XOR<Prisma.ProductUpdateWithoutInventoryInput, Prisma.ProductUncheckedUpdateWithoutInventoryInput>
+  create: Prisma.XOR<Prisma.ProductCreateWithoutInventoryInput, Prisma.ProductUncheckedCreateWithoutInventoryInput>
   where?: Prisma.ProductWhereInput
 }
 
-export type ProductUpdateToOneWithWhereWithoutReviewsInput = {
+export type ProductUpdateToOneWithWhereWithoutInventoryInput = {
   where?: Prisma.ProductWhereInput
-  data: Prisma.XOR<Prisma.ProductUpdateWithoutReviewsInput, Prisma.ProductUncheckedUpdateWithoutReviewsInput>
+  data: Prisma.XOR<Prisma.ProductUpdateWithoutInventoryInput, Prisma.ProductUncheckedUpdateWithoutInventoryInput>
 }
 
-export type ProductUpdateWithoutReviewsInput = {
+export type ProductUpdateWithoutInventoryInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
@@ -2128,15 +1784,15 @@ export type ProductUpdateWithoutReviewsInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   category?: Prisma.CategoryUpdateOneRequiredWithoutProductsNestedInput
   brand?: Prisma.BrandUpdateOneWithoutProductsNestedInput
-  inventory?: Prisma.InventoryUpdateOneWithoutProductNestedInput
   tags?: Prisma.ProductTagUpdateManyWithoutProductNestedInput
+  reviews?: Prisma.ReviewUpdateManyWithoutProductNestedInput
   cartItems?: Prisma.CartItemUpdateManyWithoutProductNestedInput
   orderItems?: Prisma.OrderItemUpdateManyWithoutProductNestedInput
   wishlist?: Prisma.WishlistUpdateManyWithoutProductNestedInput
   flashSaleItems?: Prisma.FlashSaleItemUpdateManyWithoutProductNestedInput
 }
 
-export type ProductUncheckedUpdateWithoutReviewsInput = {
+export type ProductUncheckedUpdateWithoutInventoryInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
@@ -2164,8 +1820,8 @@ export type ProductUncheckedUpdateWithoutReviewsInput = {
   totalReviews?: Prisma.IntFieldUpdateOperationsInput | number
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  inventory?: Prisma.InventoryUncheckedUpdateOneWithoutProductNestedInput
   tags?: Prisma.ProductTagUncheckedUpdateManyWithoutProductNestedInput
+  reviews?: Prisma.ReviewUncheckedUpdateManyWithoutProductNestedInput
   cartItems?: Prisma.CartItemUncheckedUpdateManyWithoutProductNestedInput
   orderItems?: Prisma.OrderItemUncheckedUpdateManyWithoutProductNestedInput
   wishlist?: Prisma.WishlistUncheckedUpdateManyWithoutProductNestedInput
@@ -2332,7 +1988,327 @@ export type ProductUncheckedUpdateWithoutOrderItemsInput = {
   flashSaleItems?: Prisma.FlashSaleItemUncheckedUpdateManyWithoutProductNestedInput
 }
 
-export type ProductCreateWithoutFlashSaleItemsInput = {
+export type ProductCreateWithoutReviewsInput = {
+  id?: string
+  name: string
+  slug: string
+  description: string
+  shortDescription?: string | null
+  sku: string
+  price: number
+  comparePrice?: number | null
+  costPrice?: number | null
+  images?: Prisma.ProductCreateimagesInput | string[]
+  thumbnail?: string | null
+  isActive?: boolean
+  isFeatured?: boolean
+  isNewArrival?: boolean
+  isBestSeller?: boolean
+  weight?: number | null
+  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  metaTitle?: string | null
+  metaDescription?: string | null
+  metaKeywords?: Prisma.ProductCreatemetaKeywordsInput | string[]
+  totalSold?: number
+  avgRating?: number
+  totalReviews?: number
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  category: Prisma.CategoryCreateNestedOneWithoutProductsInput
+  brand?: Prisma.BrandCreateNestedOneWithoutProductsInput
+  inventory?: Prisma.InventoryCreateNestedOneWithoutProductInput
+  tags?: Prisma.ProductTagCreateNestedManyWithoutProductInput
+  cartItems?: Prisma.CartItemCreateNestedManyWithoutProductInput
+  orderItems?: Prisma.OrderItemCreateNestedManyWithoutProductInput
+  wishlist?: Prisma.WishlistCreateNestedManyWithoutProductInput
+  flashSaleItems?: Prisma.FlashSaleItemCreateNestedManyWithoutProductInput
+}
+
+export type ProductUncheckedCreateWithoutReviewsInput = {
+  id?: string
+  name: string
+  slug: string
+  description: string
+  shortDescription?: string | null
+  sku: string
+  price: number
+  comparePrice?: number | null
+  costPrice?: number | null
+  categoryId: string
+  brandId?: string | null
+  images?: Prisma.ProductCreateimagesInput | string[]
+  thumbnail?: string | null
+  isActive?: boolean
+  isFeatured?: boolean
+  isNewArrival?: boolean
+  isBestSeller?: boolean
+  weight?: number | null
+  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  metaTitle?: string | null
+  metaDescription?: string | null
+  metaKeywords?: Prisma.ProductCreatemetaKeywordsInput | string[]
+  totalSold?: number
+  avgRating?: number
+  totalReviews?: number
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  inventory?: Prisma.InventoryUncheckedCreateNestedOneWithoutProductInput
+  tags?: Prisma.ProductTagUncheckedCreateNestedManyWithoutProductInput
+  cartItems?: Prisma.CartItemUncheckedCreateNestedManyWithoutProductInput
+  orderItems?: Prisma.OrderItemUncheckedCreateNestedManyWithoutProductInput
+  wishlist?: Prisma.WishlistUncheckedCreateNestedManyWithoutProductInput
+  flashSaleItems?: Prisma.FlashSaleItemUncheckedCreateNestedManyWithoutProductInput
+}
+
+export type ProductCreateOrConnectWithoutReviewsInput = {
+  where: Prisma.ProductWhereUniqueInput
+  create: Prisma.XOR<Prisma.ProductCreateWithoutReviewsInput, Prisma.ProductUncheckedCreateWithoutReviewsInput>
+}
+
+export type ProductUpsertWithoutReviewsInput = {
+  update: Prisma.XOR<Prisma.ProductUpdateWithoutReviewsInput, Prisma.ProductUncheckedUpdateWithoutReviewsInput>
+  create: Prisma.XOR<Prisma.ProductCreateWithoutReviewsInput, Prisma.ProductUncheckedCreateWithoutReviewsInput>
+  where?: Prisma.ProductWhereInput
+}
+
+export type ProductUpdateToOneWithWhereWithoutReviewsInput = {
+  where?: Prisma.ProductWhereInput
+  data: Prisma.XOR<Prisma.ProductUpdateWithoutReviewsInput, Prisma.ProductUncheckedUpdateWithoutReviewsInput>
+}
+
+export type ProductUpdateWithoutReviewsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.StringFieldUpdateOperationsInput | string
+  shortDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sku?: Prisma.StringFieldUpdateOperationsInput | string
+  price?: Prisma.FloatFieldUpdateOperationsInput | number
+  comparePrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  costPrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  images?: Prisma.ProductUpdateimagesInput | string[]
+  thumbnail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isFeatured?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isNewArrival?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isBestSeller?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  weight?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  metaTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metaDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metaKeywords?: Prisma.ProductUpdatemetaKeywordsInput | string[]
+  totalSold?: Prisma.IntFieldUpdateOperationsInput | number
+  avgRating?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalReviews?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  category?: Prisma.CategoryUpdateOneRequiredWithoutProductsNestedInput
+  brand?: Prisma.BrandUpdateOneWithoutProductsNestedInput
+  inventory?: Prisma.InventoryUpdateOneWithoutProductNestedInput
+  tags?: Prisma.ProductTagUpdateManyWithoutProductNestedInput
+  cartItems?: Prisma.CartItemUpdateManyWithoutProductNestedInput
+  orderItems?: Prisma.OrderItemUpdateManyWithoutProductNestedInput
+  wishlist?: Prisma.WishlistUpdateManyWithoutProductNestedInput
+  flashSaleItems?: Prisma.FlashSaleItemUpdateManyWithoutProductNestedInput
+}
+
+export type ProductUncheckedUpdateWithoutReviewsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.StringFieldUpdateOperationsInput | string
+  shortDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sku?: Prisma.StringFieldUpdateOperationsInput | string
+  price?: Prisma.FloatFieldUpdateOperationsInput | number
+  comparePrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  costPrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  categoryId?: Prisma.StringFieldUpdateOperationsInput | string
+  brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  images?: Prisma.ProductUpdateimagesInput | string[]
+  thumbnail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isFeatured?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isNewArrival?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isBestSeller?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  weight?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  metaTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metaDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metaKeywords?: Prisma.ProductUpdatemetaKeywordsInput | string[]
+  totalSold?: Prisma.IntFieldUpdateOperationsInput | number
+  avgRating?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalReviews?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  inventory?: Prisma.InventoryUncheckedUpdateOneWithoutProductNestedInput
+  tags?: Prisma.ProductTagUncheckedUpdateManyWithoutProductNestedInput
+  cartItems?: Prisma.CartItemUncheckedUpdateManyWithoutProductNestedInput
+  orderItems?: Prisma.OrderItemUncheckedUpdateManyWithoutProductNestedInput
+  wishlist?: Prisma.WishlistUncheckedUpdateManyWithoutProductNestedInput
+  flashSaleItems?: Prisma.FlashSaleItemUncheckedUpdateManyWithoutProductNestedInput
+}
+
+export type ProductCreateWithoutTagsInput = {
+  id?: string
+  name: string
+  slug: string
+  description: string
+  shortDescription?: string | null
+  sku: string
+  price: number
+  comparePrice?: number | null
+  costPrice?: number | null
+  images?: Prisma.ProductCreateimagesInput | string[]
+  thumbnail?: string | null
+  isActive?: boolean
+  isFeatured?: boolean
+  isNewArrival?: boolean
+  isBestSeller?: boolean
+  weight?: number | null
+  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  metaTitle?: string | null
+  metaDescription?: string | null
+  metaKeywords?: Prisma.ProductCreatemetaKeywordsInput | string[]
+  totalSold?: number
+  avgRating?: number
+  totalReviews?: number
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  category: Prisma.CategoryCreateNestedOneWithoutProductsInput
+  brand?: Prisma.BrandCreateNestedOneWithoutProductsInput
+  inventory?: Prisma.InventoryCreateNestedOneWithoutProductInput
+  reviews?: Prisma.ReviewCreateNestedManyWithoutProductInput
+  cartItems?: Prisma.CartItemCreateNestedManyWithoutProductInput
+  orderItems?: Prisma.OrderItemCreateNestedManyWithoutProductInput
+  wishlist?: Prisma.WishlistCreateNestedManyWithoutProductInput
+  flashSaleItems?: Prisma.FlashSaleItemCreateNestedManyWithoutProductInput
+}
+
+export type ProductUncheckedCreateWithoutTagsInput = {
+  id?: string
+  name: string
+  slug: string
+  description: string
+  shortDescription?: string | null
+  sku: string
+  price: number
+  comparePrice?: number | null
+  costPrice?: number | null
+  categoryId: string
+  brandId?: string | null
+  images?: Prisma.ProductCreateimagesInput | string[]
+  thumbnail?: string | null
+  isActive?: boolean
+  isFeatured?: boolean
+  isNewArrival?: boolean
+  isBestSeller?: boolean
+  weight?: number | null
+  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  metaTitle?: string | null
+  metaDescription?: string | null
+  metaKeywords?: Prisma.ProductCreatemetaKeywordsInput | string[]
+  totalSold?: number
+  avgRating?: number
+  totalReviews?: number
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  inventory?: Prisma.InventoryUncheckedCreateNestedOneWithoutProductInput
+  reviews?: Prisma.ReviewUncheckedCreateNestedManyWithoutProductInput
+  cartItems?: Prisma.CartItemUncheckedCreateNestedManyWithoutProductInput
+  orderItems?: Prisma.OrderItemUncheckedCreateNestedManyWithoutProductInput
+  wishlist?: Prisma.WishlistUncheckedCreateNestedManyWithoutProductInput
+  flashSaleItems?: Prisma.FlashSaleItemUncheckedCreateNestedManyWithoutProductInput
+}
+
+export type ProductCreateOrConnectWithoutTagsInput = {
+  where: Prisma.ProductWhereUniqueInput
+  create: Prisma.XOR<Prisma.ProductCreateWithoutTagsInput, Prisma.ProductUncheckedCreateWithoutTagsInput>
+}
+
+export type ProductUpsertWithoutTagsInput = {
+  update: Prisma.XOR<Prisma.ProductUpdateWithoutTagsInput, Prisma.ProductUncheckedUpdateWithoutTagsInput>
+  create: Prisma.XOR<Prisma.ProductCreateWithoutTagsInput, Prisma.ProductUncheckedCreateWithoutTagsInput>
+  where?: Prisma.ProductWhereInput
+}
+
+export type ProductUpdateToOneWithWhereWithoutTagsInput = {
+  where?: Prisma.ProductWhereInput
+  data: Prisma.XOR<Prisma.ProductUpdateWithoutTagsInput, Prisma.ProductUncheckedUpdateWithoutTagsInput>
+}
+
+export type ProductUpdateWithoutTagsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.StringFieldUpdateOperationsInput | string
+  shortDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sku?: Prisma.StringFieldUpdateOperationsInput | string
+  price?: Prisma.FloatFieldUpdateOperationsInput | number
+  comparePrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  costPrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  images?: Prisma.ProductUpdateimagesInput | string[]
+  thumbnail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isFeatured?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isNewArrival?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isBestSeller?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  weight?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  metaTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metaDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metaKeywords?: Prisma.ProductUpdatemetaKeywordsInput | string[]
+  totalSold?: Prisma.IntFieldUpdateOperationsInput | number
+  avgRating?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalReviews?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  category?: Prisma.CategoryUpdateOneRequiredWithoutProductsNestedInput
+  brand?: Prisma.BrandUpdateOneWithoutProductsNestedInput
+  inventory?: Prisma.InventoryUpdateOneWithoutProductNestedInput
+  reviews?: Prisma.ReviewUpdateManyWithoutProductNestedInput
+  cartItems?: Prisma.CartItemUpdateManyWithoutProductNestedInput
+  orderItems?: Prisma.OrderItemUpdateManyWithoutProductNestedInput
+  wishlist?: Prisma.WishlistUpdateManyWithoutProductNestedInput
+  flashSaleItems?: Prisma.FlashSaleItemUpdateManyWithoutProductNestedInput
+}
+
+export type ProductUncheckedUpdateWithoutTagsInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.StringFieldUpdateOperationsInput | string
+  shortDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sku?: Prisma.StringFieldUpdateOperationsInput | string
+  price?: Prisma.FloatFieldUpdateOperationsInput | number
+  comparePrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  costPrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  categoryId?: Prisma.StringFieldUpdateOperationsInput | string
+  brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  images?: Prisma.ProductUpdateimagesInput | string[]
+  thumbnail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isFeatured?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isNewArrival?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isBestSeller?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  weight?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  metaTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metaDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metaKeywords?: Prisma.ProductUpdatemetaKeywordsInput | string[]
+  totalSold?: Prisma.IntFieldUpdateOperationsInput | number
+  avgRating?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalReviews?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  inventory?: Prisma.InventoryUncheckedUpdateOneWithoutProductNestedInput
+  reviews?: Prisma.ReviewUncheckedUpdateManyWithoutProductNestedInput
+  cartItems?: Prisma.CartItemUncheckedUpdateManyWithoutProductNestedInput
+  orderItems?: Prisma.OrderItemUncheckedUpdateManyWithoutProductNestedInput
+  wishlist?: Prisma.WishlistUncheckedUpdateManyWithoutProductNestedInput
+  flashSaleItems?: Prisma.FlashSaleItemUncheckedUpdateManyWithoutProductNestedInput
+}
+
+export type ProductCreateWithoutWishlistInput = {
   id?: string
   name: string
   slug: string
@@ -2365,10 +2341,10 @@ export type ProductCreateWithoutFlashSaleItemsInput = {
   reviews?: Prisma.ReviewCreateNestedManyWithoutProductInput
   cartItems?: Prisma.CartItemCreateNestedManyWithoutProductInput
   orderItems?: Prisma.OrderItemCreateNestedManyWithoutProductInput
-  wishlist?: Prisma.WishlistCreateNestedManyWithoutProductInput
+  flashSaleItems?: Prisma.FlashSaleItemCreateNestedManyWithoutProductInput
 }
 
-export type ProductUncheckedCreateWithoutFlashSaleItemsInput = {
+export type ProductUncheckedCreateWithoutWishlistInput = {
   id?: string
   name: string
   slug: string
@@ -2401,26 +2377,26 @@ export type ProductUncheckedCreateWithoutFlashSaleItemsInput = {
   reviews?: Prisma.ReviewUncheckedCreateNestedManyWithoutProductInput
   cartItems?: Prisma.CartItemUncheckedCreateNestedManyWithoutProductInput
   orderItems?: Prisma.OrderItemUncheckedCreateNestedManyWithoutProductInput
-  wishlist?: Prisma.WishlistUncheckedCreateNestedManyWithoutProductInput
+  flashSaleItems?: Prisma.FlashSaleItemUncheckedCreateNestedManyWithoutProductInput
 }
 
-export type ProductCreateOrConnectWithoutFlashSaleItemsInput = {
+export type ProductCreateOrConnectWithoutWishlistInput = {
   where: Prisma.ProductWhereUniqueInput
-  create: Prisma.XOR<Prisma.ProductCreateWithoutFlashSaleItemsInput, Prisma.ProductUncheckedCreateWithoutFlashSaleItemsInput>
+  create: Prisma.XOR<Prisma.ProductCreateWithoutWishlistInput, Prisma.ProductUncheckedCreateWithoutWishlistInput>
 }
 
-export type ProductUpsertWithoutFlashSaleItemsInput = {
-  update: Prisma.XOR<Prisma.ProductUpdateWithoutFlashSaleItemsInput, Prisma.ProductUncheckedUpdateWithoutFlashSaleItemsInput>
-  create: Prisma.XOR<Prisma.ProductCreateWithoutFlashSaleItemsInput, Prisma.ProductUncheckedCreateWithoutFlashSaleItemsInput>
+export type ProductUpsertWithoutWishlistInput = {
+  update: Prisma.XOR<Prisma.ProductUpdateWithoutWishlistInput, Prisma.ProductUncheckedUpdateWithoutWishlistInput>
+  create: Prisma.XOR<Prisma.ProductCreateWithoutWishlistInput, Prisma.ProductUncheckedCreateWithoutWishlistInput>
   where?: Prisma.ProductWhereInput
 }
 
-export type ProductUpdateToOneWithWhereWithoutFlashSaleItemsInput = {
+export type ProductUpdateToOneWithWhereWithoutWishlistInput = {
   where?: Prisma.ProductWhereInput
-  data: Prisma.XOR<Prisma.ProductUpdateWithoutFlashSaleItemsInput, Prisma.ProductUncheckedUpdateWithoutFlashSaleItemsInput>
+  data: Prisma.XOR<Prisma.ProductUpdateWithoutWishlistInput, Prisma.ProductUncheckedUpdateWithoutWishlistInput>
 }
 
-export type ProductUpdateWithoutFlashSaleItemsInput = {
+export type ProductUpdateWithoutWishlistInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
@@ -2453,10 +2429,10 @@ export type ProductUpdateWithoutFlashSaleItemsInput = {
   reviews?: Prisma.ReviewUpdateManyWithoutProductNestedInput
   cartItems?: Prisma.CartItemUpdateManyWithoutProductNestedInput
   orderItems?: Prisma.OrderItemUpdateManyWithoutProductNestedInput
-  wishlist?: Prisma.WishlistUpdateManyWithoutProductNestedInput
+  flashSaleItems?: Prisma.FlashSaleItemUpdateManyWithoutProductNestedInput
 }
 
-export type ProductUncheckedUpdateWithoutFlashSaleItemsInput = {
+export type ProductUncheckedUpdateWithoutWishlistInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   name?: Prisma.StringFieldUpdateOperationsInput | string
   slug?: Prisma.StringFieldUpdateOperationsInput | string
@@ -2489,137 +2465,7 @@ export type ProductUncheckedUpdateWithoutFlashSaleItemsInput = {
   reviews?: Prisma.ReviewUncheckedUpdateManyWithoutProductNestedInput
   cartItems?: Prisma.CartItemUncheckedUpdateManyWithoutProductNestedInput
   orderItems?: Prisma.OrderItemUncheckedUpdateManyWithoutProductNestedInput
-  wishlist?: Prisma.WishlistUncheckedUpdateManyWithoutProductNestedInput
-}
-
-export type ProductCreateManyCategoryInput = {
-  id?: string
-  name: string
-  slug: string
-  description: string
-  shortDescription?: string | null
-  sku: string
-  price: number
-  comparePrice?: number | null
-  costPrice?: number | null
-  brandId?: string | null
-  images?: Prisma.ProductCreateimagesInput | string[]
-  thumbnail?: string | null
-  isActive?: boolean
-  isFeatured?: boolean
-  isNewArrival?: boolean
-  isBestSeller?: boolean
-  weight?: number | null
-  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  metaTitle?: string | null
-  metaDescription?: string | null
-  metaKeywords?: Prisma.ProductCreatemetaKeywordsInput | string[]
-  totalSold?: number
-  avgRating?: number
-  totalReviews?: number
-  createdAt?: Date | string
-  updatedAt?: Date | string
-}
-
-export type ProductUpdateWithoutCategoryInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  slug?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  shortDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sku?: Prisma.StringFieldUpdateOperationsInput | string
-  price?: Prisma.FloatFieldUpdateOperationsInput | number
-  comparePrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  costPrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  images?: Prisma.ProductUpdateimagesInput | string[]
-  thumbnail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isFeatured?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isNewArrival?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isBestSeller?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  weight?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  metaTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  metaDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  metaKeywords?: Prisma.ProductUpdatemetaKeywordsInput | string[]
-  totalSold?: Prisma.IntFieldUpdateOperationsInput | number
-  avgRating?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalReviews?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  brand?: Prisma.BrandUpdateOneWithoutProductsNestedInput
-  inventory?: Prisma.InventoryUpdateOneWithoutProductNestedInput
-  tags?: Prisma.ProductTagUpdateManyWithoutProductNestedInput
-  reviews?: Prisma.ReviewUpdateManyWithoutProductNestedInput
-  cartItems?: Prisma.CartItemUpdateManyWithoutProductNestedInput
-  orderItems?: Prisma.OrderItemUpdateManyWithoutProductNestedInput
-  wishlist?: Prisma.WishlistUpdateManyWithoutProductNestedInput
-  flashSaleItems?: Prisma.FlashSaleItemUpdateManyWithoutProductNestedInput
-}
-
-export type ProductUncheckedUpdateWithoutCategoryInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  slug?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  shortDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sku?: Prisma.StringFieldUpdateOperationsInput | string
-  price?: Prisma.FloatFieldUpdateOperationsInput | number
-  comparePrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  costPrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  images?: Prisma.ProductUpdateimagesInput | string[]
-  thumbnail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isFeatured?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isNewArrival?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isBestSeller?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  weight?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  metaTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  metaDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  metaKeywords?: Prisma.ProductUpdatemetaKeywordsInput | string[]
-  totalSold?: Prisma.IntFieldUpdateOperationsInput | number
-  avgRating?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalReviews?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  inventory?: Prisma.InventoryUncheckedUpdateOneWithoutProductNestedInput
-  tags?: Prisma.ProductTagUncheckedUpdateManyWithoutProductNestedInput
-  reviews?: Prisma.ReviewUncheckedUpdateManyWithoutProductNestedInput
-  cartItems?: Prisma.CartItemUncheckedUpdateManyWithoutProductNestedInput
-  orderItems?: Prisma.OrderItemUncheckedUpdateManyWithoutProductNestedInput
-  wishlist?: Prisma.WishlistUncheckedUpdateManyWithoutProductNestedInput
   flashSaleItems?: Prisma.FlashSaleItemUncheckedUpdateManyWithoutProductNestedInput
-}
-
-export type ProductUncheckedUpdateManyWithoutCategoryInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  name?: Prisma.StringFieldUpdateOperationsInput | string
-  slug?: Prisma.StringFieldUpdateOperationsInput | string
-  description?: Prisma.StringFieldUpdateOperationsInput | string
-  shortDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  sku?: Prisma.StringFieldUpdateOperationsInput | string
-  price?: Prisma.FloatFieldUpdateOperationsInput | number
-  comparePrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  costPrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  images?: Prisma.ProductUpdateimagesInput | string[]
-  thumbnail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isFeatured?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isNewArrival?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  isBestSeller?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  weight?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
-  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
-  metaTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  metaDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  metaKeywords?: Prisma.ProductUpdatemetaKeywordsInput | string[]
-  totalSold?: Prisma.IntFieldUpdateOperationsInput | number
-  avgRating?: Prisma.FloatFieldUpdateOperationsInput | number
-  totalReviews?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
 export type ProductCreateManyBrandInput = {
@@ -2734,6 +2580,136 @@ export type ProductUncheckedUpdateManyWithoutBrandInput = {
   comparePrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   costPrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
   categoryId?: Prisma.StringFieldUpdateOperationsInput | string
+  images?: Prisma.ProductUpdateimagesInput | string[]
+  thumbnail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isFeatured?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isNewArrival?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isBestSeller?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  weight?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  metaTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metaDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metaKeywords?: Prisma.ProductUpdatemetaKeywordsInput | string[]
+  totalSold?: Prisma.IntFieldUpdateOperationsInput | number
+  avgRating?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalReviews?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+}
+
+export type ProductCreateManyCategoryInput = {
+  id?: string
+  name: string
+  slug: string
+  description: string
+  shortDescription?: string | null
+  sku: string
+  price: number
+  comparePrice?: number | null
+  costPrice?: number | null
+  brandId?: string | null
+  images?: Prisma.ProductCreateimagesInput | string[]
+  thumbnail?: string | null
+  isActive?: boolean
+  isFeatured?: boolean
+  isNewArrival?: boolean
+  isBestSeller?: boolean
+  weight?: number | null
+  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  metaTitle?: string | null
+  metaDescription?: string | null
+  metaKeywords?: Prisma.ProductCreatemetaKeywordsInput | string[]
+  totalSold?: number
+  avgRating?: number
+  totalReviews?: number
+  createdAt?: Date | string
+  updatedAt?: Date | string
+}
+
+export type ProductUpdateWithoutCategoryInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.StringFieldUpdateOperationsInput | string
+  shortDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sku?: Prisma.StringFieldUpdateOperationsInput | string
+  price?: Prisma.FloatFieldUpdateOperationsInput | number
+  comparePrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  costPrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  images?: Prisma.ProductUpdateimagesInput | string[]
+  thumbnail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isFeatured?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isNewArrival?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isBestSeller?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  weight?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  metaTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metaDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metaKeywords?: Prisma.ProductUpdatemetaKeywordsInput | string[]
+  totalSold?: Prisma.IntFieldUpdateOperationsInput | number
+  avgRating?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalReviews?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  brand?: Prisma.BrandUpdateOneWithoutProductsNestedInput
+  inventory?: Prisma.InventoryUpdateOneWithoutProductNestedInput
+  tags?: Prisma.ProductTagUpdateManyWithoutProductNestedInput
+  reviews?: Prisma.ReviewUpdateManyWithoutProductNestedInput
+  cartItems?: Prisma.CartItemUpdateManyWithoutProductNestedInput
+  orderItems?: Prisma.OrderItemUpdateManyWithoutProductNestedInput
+  wishlist?: Prisma.WishlistUpdateManyWithoutProductNestedInput
+  flashSaleItems?: Prisma.FlashSaleItemUpdateManyWithoutProductNestedInput
+}
+
+export type ProductUncheckedUpdateWithoutCategoryInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.StringFieldUpdateOperationsInput | string
+  shortDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sku?: Prisma.StringFieldUpdateOperationsInput | string
+  price?: Prisma.FloatFieldUpdateOperationsInput | number
+  comparePrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  costPrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  images?: Prisma.ProductUpdateimagesInput | string[]
+  thumbnail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isFeatured?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isNewArrival?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  isBestSeller?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  weight?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  dimensions?: Prisma.NullableJsonNullValueInput | runtime.InputJsonValue
+  metaTitle?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metaDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  metaKeywords?: Prisma.ProductUpdatemetaKeywordsInput | string[]
+  totalSold?: Prisma.IntFieldUpdateOperationsInput | number
+  avgRating?: Prisma.FloatFieldUpdateOperationsInput | number
+  totalReviews?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  inventory?: Prisma.InventoryUncheckedUpdateOneWithoutProductNestedInput
+  tags?: Prisma.ProductTagUncheckedUpdateManyWithoutProductNestedInput
+  reviews?: Prisma.ReviewUncheckedUpdateManyWithoutProductNestedInput
+  cartItems?: Prisma.CartItemUncheckedUpdateManyWithoutProductNestedInput
+  orderItems?: Prisma.OrderItemUncheckedUpdateManyWithoutProductNestedInput
+  wishlist?: Prisma.WishlistUncheckedUpdateManyWithoutProductNestedInput
+  flashSaleItems?: Prisma.FlashSaleItemUncheckedUpdateManyWithoutProductNestedInput
+}
+
+export type ProductUncheckedUpdateManyWithoutCategoryInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  name?: Prisma.StringFieldUpdateOperationsInput | string
+  slug?: Prisma.StringFieldUpdateOperationsInput | string
+  description?: Prisma.StringFieldUpdateOperationsInput | string
+  shortDescription?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  sku?: Prisma.StringFieldUpdateOperationsInput | string
+  price?: Prisma.FloatFieldUpdateOperationsInput | number
+  comparePrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  costPrice?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null
+  brandId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   images?: Prisma.ProductUpdateimagesInput | string[]
   thumbnail?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   isActive?: Prisma.BoolFieldUpdateOperationsInput | boolean

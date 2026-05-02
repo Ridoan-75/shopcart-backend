@@ -441,11 +441,6 @@ export type InventoryUncheckedUpdateManyInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type InventoryNullableScalarRelationFilter = {
-  is?: Prisma.InventoryWhereInput | null
-  isNot?: Prisma.InventoryWhereInput | null
-}
-
 export type InventoryCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   productId?: Prisma.SortOrder
@@ -498,6 +493,11 @@ export type InventorySumOrderByAggregateInput = {
   quantity?: Prisma.SortOrder
   reservedQty?: Prisma.SortOrder
   lowStockAlert?: Prisma.SortOrder
+}
+
+export type InventoryNullableScalarRelationFilter = {
+  is?: Prisma.InventoryWhereInput | null
+  isNot?: Prisma.InventoryWhereInput | null
 }
 
 export type InventoryCreateNestedOneWithoutProductInput = {

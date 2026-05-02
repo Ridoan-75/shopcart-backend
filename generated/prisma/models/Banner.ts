@@ -551,6 +551,10 @@ export type EnumBannerPositionFieldUpdateOperationsInput = {
   set?: $Enums.BannerPosition
 }
 
+export type NullableDateTimeFieldUpdateOperationsInput = {
+  set?: Date | string | null
+}
+
 
 
 export type BannerSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{

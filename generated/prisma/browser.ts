@@ -18,90 +18,20 @@ export { Prisma }
 export * as $Enums from './enums'
 export * from './enums';
 /**
- * Model User
- * 
- */
-export type User = Prisma.UserModel
-/**
  * Model Address
  * 
  */
 export type Address = Prisma.AddressModel
 /**
- * Model Category
+ * Model SearchLog
  * 
  */
-export type Category = Prisma.CategoryModel
+export type SearchLog = Prisma.SearchLogModel
 /**
- * Model Brand
+ * Model AiRecommendation
  * 
  */
-export type Brand = Prisma.BrandModel
-/**
- * Model Tag
- * 
- */
-export type Tag = Prisma.TagModel
-/**
- * Model ProductTag
- * 
- */
-export type ProductTag = Prisma.ProductTagModel
-/**
- * Model Product
- * 
- */
-export type Product = Prisma.ProductModel
-/**
- * Model Inventory
- * 
- */
-export type Inventory = Prisma.InventoryModel
-/**
- * Model Cart
- * 
- */
-export type Cart = Prisma.CartModel
-/**
- * Model CartItem
- * 
- */
-export type CartItem = Prisma.CartItemModel
-/**
- * Model Wishlist
- * 
- */
-export type Wishlist = Prisma.WishlistModel
-/**
- * Model Review
- * 
- */
-export type Review = Prisma.ReviewModel
-/**
- * Model Order
- * 
- */
-export type Order = Prisma.OrderModel
-/**
- * Model OrderItem
- * 
- */
-export type OrderItem = Prisma.OrderItemModel
-/**
- * Model Coupon
- * 
- */
-export type Coupon = Prisma.CouponModel
-/**
- * Model Payment
- * 
- */
-export type Payment = Prisma.PaymentModel
-/**
- * Model Shipping
- * 
- */
-export type Shipping = Prisma.ShippingModel
+export type AiRecommendation = Prisma.AiRecommendationModel
 /**
  * Model Banner
  * 
@@ -123,20 +53,35 @@ export type Blog = Prisma.BlogModel
  */
 export type BlogComment = Prisma.BlogCommentModel
 /**
+ * Model Brand
+ * 
+ */
+export type Brand = Prisma.BrandModel
+/**
+ * Model Cart
+ * 
+ */
+export type Cart = Prisma.CartModel
+/**
+ * Model CartItem
+ * 
+ */
+export type CartItem = Prisma.CartItemModel
+/**
+ * Model Category
+ * 
+ */
+export type Category = Prisma.CategoryModel
+/**
  * Model Contact
  * 
  */
 export type Contact = Prisma.ContactModel
 /**
- * Model Newsletter
+ * Model Coupon
  * 
  */
-export type Newsletter = Prisma.NewsletterModel
-/**
- * Model Notification
- * 
- */
-export type Notification = Prisma.NotificationModel
+export type Coupon = Prisma.CouponModel
 /**
  * Model FlashSale
  * 
@@ -148,12 +93,72 @@ export type FlashSale = Prisma.FlashSaleModel
  */
 export type FlashSaleItem = Prisma.FlashSaleItemModel
 /**
- * Model AiRecommendation
+ * Model Inventory
  * 
  */
-export type AiRecommendation = Prisma.AiRecommendationModel
+export type Inventory = Prisma.InventoryModel
+/**
+ * Model Newsletter
+ * 
+ */
+export type Newsletter = Prisma.NewsletterModel
+/**
+ * Model Notification
+ * 
+ */
+export type Notification = Prisma.NotificationModel
+/**
+ * Model Order
+ * 
+ */
+export type Order = Prisma.OrderModel
+/**
+ * Model OrderItem
+ * 
+ */
+export type OrderItem = Prisma.OrderItemModel
+/**
+ * Model Payment
+ * 
+ */
+export type Payment = Prisma.PaymentModel
+/**
+ * Model Product
+ * 
+ */
+export type Product = Prisma.ProductModel
+/**
+ * Model Review
+ * 
+ */
+export type Review = Prisma.ReviewModel
+/**
+ * Model Shipping
+ * 
+ */
+export type Shipping = Prisma.ShippingModel
+/**
+ * Model Tag
+ * 
+ */
+export type Tag = Prisma.TagModel
+/**
+ * Model ProductTag
+ * 
+ */
+export type ProductTag = Prisma.ProductTagModel
 /**
  * Model Upload
  * 
  */
 export type Upload = Prisma.UploadModel
+/**
+ * Model User
+ * 
+ */
+export type User = Prisma.UserModel
+/**
+ * Model Wishlist
+ * 
+ */
+export type Wishlist = Prisma.WishlistModel

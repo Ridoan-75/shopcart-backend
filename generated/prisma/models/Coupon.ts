@@ -634,6 +634,18 @@ export type CouponUpdateOneWithoutCartsNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.CouponUpdateToOneWithWhereWithoutCartsInput, Prisma.CouponUpdateWithoutCartsInput>, Prisma.CouponUncheckedUpdateWithoutCartsInput>
 }
 
+export type EnumCouponTypeFieldUpdateOperationsInput = {
+  set?: $Enums.CouponType
+}
+
+export type NullableFloatFieldUpdateOperationsInput = {
+  set?: number | null
+  increment?: number
+  decrement?: number
+  multiply?: number
+  divide?: number
+}
+
 export type CouponCreateNestedOneWithoutOrdersInput = {
   create?: Prisma.XOR<Prisma.CouponCreateWithoutOrdersInput, Prisma.CouponUncheckedCreateWithoutOrdersInput>
   connectOrCreate?: Prisma.CouponCreateOrConnectWithoutOrdersInput
@@ -648,18 +660,6 @@ export type CouponUpdateOneWithoutOrdersNestedInput = {
   delete?: Prisma.CouponWhereInput | boolean
   connect?: Prisma.CouponWhereUniqueInput
   update?: Prisma.XOR<Prisma.XOR<Prisma.CouponUpdateToOneWithWhereWithoutOrdersInput, Prisma.CouponUpdateWithoutOrdersInput>, Prisma.CouponUncheckedUpdateWithoutOrdersInput>
-}
-
-export type EnumCouponTypeFieldUpdateOperationsInput = {
-  set?: $Enums.CouponType
-}
-
-export type NullableIntFieldUpdateOperationsInput = {
-  set?: number | null
-  increment?: number
-  decrement?: number
-  multiply?: number
-  divide?: number
 }
 
 export type CouponCreateWithoutCartsInput = {

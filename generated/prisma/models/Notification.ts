@@ -355,16 +355,6 @@ export type NotificationUncheckedUpdateManyInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type NotificationListRelationFilter = {
-  every?: Prisma.NotificationWhereInput
-  some?: Prisma.NotificationWhereInput
-  none?: Prisma.NotificationWhereInput
-}
-
-export type NotificationOrderByRelationAggregateInput = {
-  _count?: Prisma.SortOrder
-}
-
 export type NotificationCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   userId?: Prisma.SortOrder
@@ -397,6 +387,20 @@ export type NotificationMinOrderByAggregateInput = {
   isRead?: Prisma.SortOrder
   link?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
+}
+
+export type NotificationListRelationFilter = {
+  every?: Prisma.NotificationWhereInput
+  some?: Prisma.NotificationWhereInput
+  none?: Prisma.NotificationWhereInput
+}
+
+export type NotificationOrderByRelationAggregateInput = {
+  _count?: Prisma.SortOrder
+}
+
+export type EnumNotificationTypeFieldUpdateOperationsInput = {
+  set?: $Enums.NotificationType
 }
 
 export type NotificationCreateNestedManyWithoutUserInput = {
@@ -439,10 +443,6 @@ export type NotificationUncheckedUpdateManyWithoutUserNestedInput = {
   update?: Prisma.NotificationUpdateWithWhereUniqueWithoutUserInput | Prisma.NotificationUpdateWithWhereUniqueWithoutUserInput[]
   updateMany?: Prisma.NotificationUpdateManyWithWhereWithoutUserInput | Prisma.NotificationUpdateManyWithWhereWithoutUserInput[]
   deleteMany?: Prisma.NotificationScalarWhereInput | Prisma.NotificationScalarWhereInput[]
-}
-
-export type EnumNotificationTypeFieldUpdateOperationsInput = {
-  set?: $Enums.NotificationType
 }
 
 export type NotificationCreateWithoutUserInput = {

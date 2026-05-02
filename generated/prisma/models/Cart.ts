@@ -292,11 +292,6 @@ export type CartUncheckedUpdateManyInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type CartNullableScalarRelationFilter = {
-  is?: Prisma.CartWhereInput | null
-  isNot?: Prisma.CartWhereInput | null
-}
-
 export type CartCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   userId?: Prisma.SortOrder
@@ -336,36 +331,9 @@ export type CartOrderByRelationAggregateInput = {
   _count?: Prisma.SortOrder
 }
 
-export type CartCreateNestedOneWithoutUserInput = {
-  create?: Prisma.XOR<Prisma.CartCreateWithoutUserInput, Prisma.CartUncheckedCreateWithoutUserInput>
-  connectOrCreate?: Prisma.CartCreateOrConnectWithoutUserInput
-  connect?: Prisma.CartWhereUniqueInput
-}
-
-export type CartUncheckedCreateNestedOneWithoutUserInput = {
-  create?: Prisma.XOR<Prisma.CartCreateWithoutUserInput, Prisma.CartUncheckedCreateWithoutUserInput>
-  connectOrCreate?: Prisma.CartCreateOrConnectWithoutUserInput
-  connect?: Prisma.CartWhereUniqueInput
-}
-
-export type CartUpdateOneWithoutUserNestedInput = {
-  create?: Prisma.XOR<Prisma.CartCreateWithoutUserInput, Prisma.CartUncheckedCreateWithoutUserInput>
-  connectOrCreate?: Prisma.CartCreateOrConnectWithoutUserInput
-  upsert?: Prisma.CartUpsertWithoutUserInput
-  disconnect?: Prisma.CartWhereInput | boolean
-  delete?: Prisma.CartWhereInput | boolean
-  connect?: Prisma.CartWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.CartUpdateToOneWithWhereWithoutUserInput, Prisma.CartUpdateWithoutUserInput>, Prisma.CartUncheckedUpdateWithoutUserInput>
-}
-
-export type CartUncheckedUpdateOneWithoutUserNestedInput = {
-  create?: Prisma.XOR<Prisma.CartCreateWithoutUserInput, Prisma.CartUncheckedCreateWithoutUserInput>
-  connectOrCreate?: Prisma.CartCreateOrConnectWithoutUserInput
-  upsert?: Prisma.CartUpsertWithoutUserInput
-  disconnect?: Prisma.CartWhereInput | boolean
-  delete?: Prisma.CartWhereInput | boolean
-  connect?: Prisma.CartWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.CartUpdateToOneWithWhereWithoutUserInput, Prisma.CartUpdateWithoutUserInput>, Prisma.CartUncheckedUpdateWithoutUserInput>
+export type CartNullableScalarRelationFilter = {
+  is?: Prisma.CartWhereInput | null
+  isNot?: Prisma.CartWhereInput | null
 }
 
 export type CartCreateNestedOneWithoutItemsInput = {
@@ -424,52 +392,36 @@ export type CartUncheckedUpdateManyWithoutCouponNestedInput = {
   deleteMany?: Prisma.CartScalarWhereInput | Prisma.CartScalarWhereInput[]
 }
 
-export type CartCreateWithoutUserInput = {
-  id?: string
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  coupon?: Prisma.CouponCreateNestedOneWithoutCartsInput
-  items?: Prisma.CartItemCreateNestedManyWithoutCartInput
+export type CartCreateNestedOneWithoutUserInput = {
+  create?: Prisma.XOR<Prisma.CartCreateWithoutUserInput, Prisma.CartUncheckedCreateWithoutUserInput>
+  connectOrCreate?: Prisma.CartCreateOrConnectWithoutUserInput
+  connect?: Prisma.CartWhereUniqueInput
 }
 
-export type CartUncheckedCreateWithoutUserInput = {
-  id?: string
-  couponId?: string | null
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  items?: Prisma.CartItemUncheckedCreateNestedManyWithoutCartInput
+export type CartUncheckedCreateNestedOneWithoutUserInput = {
+  create?: Prisma.XOR<Prisma.CartCreateWithoutUserInput, Prisma.CartUncheckedCreateWithoutUserInput>
+  connectOrCreate?: Prisma.CartCreateOrConnectWithoutUserInput
+  connect?: Prisma.CartWhereUniqueInput
 }
 
-export type CartCreateOrConnectWithoutUserInput = {
-  where: Prisma.CartWhereUniqueInput
-  create: Prisma.XOR<Prisma.CartCreateWithoutUserInput, Prisma.CartUncheckedCreateWithoutUserInput>
+export type CartUpdateOneWithoutUserNestedInput = {
+  create?: Prisma.XOR<Prisma.CartCreateWithoutUserInput, Prisma.CartUncheckedCreateWithoutUserInput>
+  connectOrCreate?: Prisma.CartCreateOrConnectWithoutUserInput
+  upsert?: Prisma.CartUpsertWithoutUserInput
+  disconnect?: Prisma.CartWhereInput | boolean
+  delete?: Prisma.CartWhereInput | boolean
+  connect?: Prisma.CartWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.CartUpdateToOneWithWhereWithoutUserInput, Prisma.CartUpdateWithoutUserInput>, Prisma.CartUncheckedUpdateWithoutUserInput>
 }
 
-export type CartUpsertWithoutUserInput = {
-  update: Prisma.XOR<Prisma.CartUpdateWithoutUserInput, Prisma.CartUncheckedUpdateWithoutUserInput>
-  create: Prisma.XOR<Prisma.CartCreateWithoutUserInput, Prisma.CartUncheckedCreateWithoutUserInput>
-  where?: Prisma.CartWhereInput
-}
-
-export type CartUpdateToOneWithWhereWithoutUserInput = {
-  where?: Prisma.CartWhereInput
-  data: Prisma.XOR<Prisma.CartUpdateWithoutUserInput, Prisma.CartUncheckedUpdateWithoutUserInput>
-}
-
-export type CartUpdateWithoutUserInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  coupon?: Prisma.CouponUpdateOneWithoutCartsNestedInput
-  items?: Prisma.CartItemUpdateManyWithoutCartNestedInput
-}
-
-export type CartUncheckedUpdateWithoutUserInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  couponId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  items?: Prisma.CartItemUncheckedUpdateManyWithoutCartNestedInput
+export type CartUncheckedUpdateOneWithoutUserNestedInput = {
+  create?: Prisma.XOR<Prisma.CartCreateWithoutUserInput, Prisma.CartUncheckedCreateWithoutUserInput>
+  connectOrCreate?: Prisma.CartCreateOrConnectWithoutUserInput
+  upsert?: Prisma.CartUpsertWithoutUserInput
+  disconnect?: Prisma.CartWhereInput | boolean
+  delete?: Prisma.CartWhereInput | boolean
+  connect?: Prisma.CartWhereUniqueInput
+  update?: Prisma.XOR<Prisma.XOR<Prisma.CartUpdateToOneWithWhereWithoutUserInput, Prisma.CartUpdateWithoutUserInput>, Prisma.CartUncheckedUpdateWithoutUserInput>
 }
 
 export type CartCreateWithoutItemsInput = {
@@ -571,6 +523,54 @@ export type CartScalarWhereInput = {
   couponId?: Prisma.StringNullableFilter<"Cart"> | string | null
   createdAt?: Prisma.DateTimeFilter<"Cart"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Cart"> | Date | string
+}
+
+export type CartCreateWithoutUserInput = {
+  id?: string
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  coupon?: Prisma.CouponCreateNestedOneWithoutCartsInput
+  items?: Prisma.CartItemCreateNestedManyWithoutCartInput
+}
+
+export type CartUncheckedCreateWithoutUserInput = {
+  id?: string
+  couponId?: string | null
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  items?: Prisma.CartItemUncheckedCreateNestedManyWithoutCartInput
+}
+
+export type CartCreateOrConnectWithoutUserInput = {
+  where: Prisma.CartWhereUniqueInput
+  create: Prisma.XOR<Prisma.CartCreateWithoutUserInput, Prisma.CartUncheckedCreateWithoutUserInput>
+}
+
+export type CartUpsertWithoutUserInput = {
+  update: Prisma.XOR<Prisma.CartUpdateWithoutUserInput, Prisma.CartUncheckedUpdateWithoutUserInput>
+  create: Prisma.XOR<Prisma.CartCreateWithoutUserInput, Prisma.CartUncheckedCreateWithoutUserInput>
+  where?: Prisma.CartWhereInput
+}
+
+export type CartUpdateToOneWithWhereWithoutUserInput = {
+  where?: Prisma.CartWhereInput
+  data: Prisma.XOR<Prisma.CartUpdateWithoutUserInput, Prisma.CartUncheckedUpdateWithoutUserInput>
+}
+
+export type CartUpdateWithoutUserInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  coupon?: Prisma.CouponUpdateOneWithoutCartsNestedInput
+  items?: Prisma.CartItemUpdateManyWithoutCartNestedInput
+}
+
+export type CartUncheckedUpdateWithoutUserInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  couponId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  items?: Prisma.CartItemUncheckedUpdateManyWithoutCartNestedInput
 }
 
 export type CartCreateManyCouponInput = {

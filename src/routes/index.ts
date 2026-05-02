@@ -11,6 +11,9 @@ import wishlistRoutes from "../modules/wishlist/wishlist.route";
 import couponRoutes from "../modules/coupon/coupon.route";
 import orderRoutes from "../modules/order/order.route";
 import paymentRoutes from "../modules/payment/payment.route";
+import shippingRoutes from "../modules/shipping/shipping.route";
+
+
 
 const router = Router();
 
@@ -26,5 +29,6 @@ router.use("/wishlist", wishlistRoutes);
 router.use("/coupons", couponRoutes);
 router.use("/orders", orderRoutes);
 router.use("/payments", paymentRoutes);
+router.use("/shipping", shippingRoutes);
 
 export default router;

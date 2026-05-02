@@ -416,16 +416,6 @@ export type ContactUncheckedUpdateManyInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
 }
 
-export type ContactListRelationFilter = {
-  every?: Prisma.ContactWhereInput
-  some?: Prisma.ContactWhereInput
-  none?: Prisma.ContactWhereInput
-}
-
-export type ContactOrderByRelationAggregateInput = {
-  _count?: Prisma.SortOrder
-}
-
 export type ContactCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   userId?: Prisma.SortOrder
@@ -471,6 +461,20 @@ export type ContactMinOrderByAggregateInput = {
   updatedAt?: Prisma.SortOrder
 }
 
+export type ContactListRelationFilter = {
+  every?: Prisma.ContactWhereInput
+  some?: Prisma.ContactWhereInput
+  none?: Prisma.ContactWhereInput
+}
+
+export type ContactOrderByRelationAggregateInput = {
+  _count?: Prisma.SortOrder
+}
+
+export type EnumContactStatusFieldUpdateOperationsInput = {
+  set?: $Enums.ContactStatus
+}
+
 export type ContactCreateNestedManyWithoutUserInput = {
   create?: Prisma.XOR<Prisma.ContactCreateWithoutUserInput, Prisma.ContactUncheckedCreateWithoutUserInput> | Prisma.ContactCreateWithoutUserInput[] | Prisma.ContactUncheckedCreateWithoutUserInput[]
   connectOrCreate?: Prisma.ContactCreateOrConnectWithoutUserInput | Prisma.ContactCreateOrConnectWithoutUserInput[]
@@ -511,10 +515,6 @@ export type ContactUncheckedUpdateManyWithoutUserNestedInput = {
   update?: Prisma.ContactUpdateWithWhereUniqueWithoutUserInput | Prisma.ContactUpdateWithWhereUniqueWithoutUserInput[]
   updateMany?: Prisma.ContactUpdateManyWithWhereWithoutUserInput | Prisma.ContactUpdateManyWithWhereWithoutUserInput[]
   deleteMany?: Prisma.ContactScalarWhereInput | Prisma.ContactScalarWhereInput[]
-}
-
-export type EnumContactStatusFieldUpdateOperationsInput = {
-  set?: $Enums.ContactStatus
 }
 
 export type ContactCreateWithoutUserInput = {

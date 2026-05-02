@@ -399,48 +399,6 @@ export type BlogCommentMinOrderByAggregateInput = {
   updatedAt?: Prisma.SortOrder
 }
 
-export type BlogCommentCreateNestedManyWithoutUserInput = {
-  create?: Prisma.XOR<Prisma.BlogCommentCreateWithoutUserInput, Prisma.BlogCommentUncheckedCreateWithoutUserInput> | Prisma.BlogCommentCreateWithoutUserInput[] | Prisma.BlogCommentUncheckedCreateWithoutUserInput[]
-  connectOrCreate?: Prisma.BlogCommentCreateOrConnectWithoutUserInput | Prisma.BlogCommentCreateOrConnectWithoutUserInput[]
-  createMany?: Prisma.BlogCommentCreateManyUserInputEnvelope
-  connect?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
-}
-
-export type BlogCommentUncheckedCreateNestedManyWithoutUserInput = {
-  create?: Prisma.XOR<Prisma.BlogCommentCreateWithoutUserInput, Prisma.BlogCommentUncheckedCreateWithoutUserInput> | Prisma.BlogCommentCreateWithoutUserInput[] | Prisma.BlogCommentUncheckedCreateWithoutUserInput[]
-  connectOrCreate?: Prisma.BlogCommentCreateOrConnectWithoutUserInput | Prisma.BlogCommentCreateOrConnectWithoutUserInput[]
-  createMany?: Prisma.BlogCommentCreateManyUserInputEnvelope
-  connect?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
-}
-
-export type BlogCommentUpdateManyWithoutUserNestedInput = {
-  create?: Prisma.XOR<Prisma.BlogCommentCreateWithoutUserInput, Prisma.BlogCommentUncheckedCreateWithoutUserInput> | Prisma.BlogCommentCreateWithoutUserInput[] | Prisma.BlogCommentUncheckedCreateWithoutUserInput[]
-  connectOrCreate?: Prisma.BlogCommentCreateOrConnectWithoutUserInput | Prisma.BlogCommentCreateOrConnectWithoutUserInput[]
-  upsert?: Prisma.BlogCommentUpsertWithWhereUniqueWithoutUserInput | Prisma.BlogCommentUpsertWithWhereUniqueWithoutUserInput[]
-  createMany?: Prisma.BlogCommentCreateManyUserInputEnvelope
-  set?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
-  disconnect?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
-  delete?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
-  connect?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
-  update?: Prisma.BlogCommentUpdateWithWhereUniqueWithoutUserInput | Prisma.BlogCommentUpdateWithWhereUniqueWithoutUserInput[]
-  updateMany?: Prisma.BlogCommentUpdateManyWithWhereWithoutUserInput | Prisma.BlogCommentUpdateManyWithWhereWithoutUserInput[]
-  deleteMany?: Prisma.BlogCommentScalarWhereInput | Prisma.BlogCommentScalarWhereInput[]
-}
-
-export type BlogCommentUncheckedUpdateManyWithoutUserNestedInput = {
-  create?: Prisma.XOR<Prisma.BlogCommentCreateWithoutUserInput, Prisma.BlogCommentUncheckedCreateWithoutUserInput> | Prisma.BlogCommentCreateWithoutUserInput[] | Prisma.BlogCommentUncheckedCreateWithoutUserInput[]
-  connectOrCreate?: Prisma.BlogCommentCreateOrConnectWithoutUserInput | Prisma.BlogCommentCreateOrConnectWithoutUserInput[]
-  upsert?: Prisma.BlogCommentUpsertWithWhereUniqueWithoutUserInput | Prisma.BlogCommentUpsertWithWhereUniqueWithoutUserInput[]
-  createMany?: Prisma.BlogCommentCreateManyUserInputEnvelope
-  set?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
-  disconnect?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
-  delete?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
-  connect?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
-  update?: Prisma.BlogCommentUpdateWithWhereUniqueWithoutUserInput | Prisma.BlogCommentUpdateWithWhereUniqueWithoutUserInput[]
-  updateMany?: Prisma.BlogCommentUpdateManyWithWhereWithoutUserInput | Prisma.BlogCommentUpdateManyWithWhereWithoutUserInput[]
-  deleteMany?: Prisma.BlogCommentScalarWhereInput | Prisma.BlogCommentScalarWhereInput[]
-}
-
 export type BlogCommentCreateNestedManyWithoutBlogInput = {
   create?: Prisma.XOR<Prisma.BlogCommentCreateWithoutBlogInput, Prisma.BlogCommentUncheckedCreateWithoutBlogInput> | Prisma.BlogCommentCreateWithoutBlogInput[] | Prisma.BlogCommentUncheckedCreateWithoutBlogInput[]
   connectOrCreate?: Prisma.BlogCommentCreateOrConnectWithoutBlogInput | Prisma.BlogCommentCreateOrConnectWithoutBlogInput[]
@@ -541,66 +499,46 @@ export type BlogCommentUncheckedUpdateManyWithoutParentNestedInput = {
   deleteMany?: Prisma.BlogCommentScalarWhereInput | Prisma.BlogCommentScalarWhereInput[]
 }
 
-export type BlogCommentCreateWithoutUserInput = {
-  id?: string
-  body: string
-  isApproved?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  blog: Prisma.BlogCreateNestedOneWithoutCommentsInput
-  parent?: Prisma.BlogCommentCreateNestedOneWithoutRepliesInput
-  replies?: Prisma.BlogCommentCreateNestedManyWithoutParentInput
+export type BlogCommentCreateNestedManyWithoutUserInput = {
+  create?: Prisma.XOR<Prisma.BlogCommentCreateWithoutUserInput, Prisma.BlogCommentUncheckedCreateWithoutUserInput> | Prisma.BlogCommentCreateWithoutUserInput[] | Prisma.BlogCommentUncheckedCreateWithoutUserInput[]
+  connectOrCreate?: Prisma.BlogCommentCreateOrConnectWithoutUserInput | Prisma.BlogCommentCreateOrConnectWithoutUserInput[]
+  createMany?: Prisma.BlogCommentCreateManyUserInputEnvelope
+  connect?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
 }
 
-export type BlogCommentUncheckedCreateWithoutUserInput = {
-  id?: string
-  blogId: string
-  parentId?: string | null
-  body: string
-  isApproved?: boolean
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  replies?: Prisma.BlogCommentUncheckedCreateNestedManyWithoutParentInput
+export type BlogCommentUncheckedCreateNestedManyWithoutUserInput = {
+  create?: Prisma.XOR<Prisma.BlogCommentCreateWithoutUserInput, Prisma.BlogCommentUncheckedCreateWithoutUserInput> | Prisma.BlogCommentCreateWithoutUserInput[] | Prisma.BlogCommentUncheckedCreateWithoutUserInput[]
+  connectOrCreate?: Prisma.BlogCommentCreateOrConnectWithoutUserInput | Prisma.BlogCommentCreateOrConnectWithoutUserInput[]
+  createMany?: Prisma.BlogCommentCreateManyUserInputEnvelope
+  connect?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
 }
 
-export type BlogCommentCreateOrConnectWithoutUserInput = {
-  where: Prisma.BlogCommentWhereUniqueInput
-  create: Prisma.XOR<Prisma.BlogCommentCreateWithoutUserInput, Prisma.BlogCommentUncheckedCreateWithoutUserInput>
+export type BlogCommentUpdateManyWithoutUserNestedInput = {
+  create?: Prisma.XOR<Prisma.BlogCommentCreateWithoutUserInput, Prisma.BlogCommentUncheckedCreateWithoutUserInput> | Prisma.BlogCommentCreateWithoutUserInput[] | Prisma.BlogCommentUncheckedCreateWithoutUserInput[]
+  connectOrCreate?: Prisma.BlogCommentCreateOrConnectWithoutUserInput | Prisma.BlogCommentCreateOrConnectWithoutUserInput[]
+  upsert?: Prisma.BlogCommentUpsertWithWhereUniqueWithoutUserInput | Prisma.BlogCommentUpsertWithWhereUniqueWithoutUserInput[]
+  createMany?: Prisma.BlogCommentCreateManyUserInputEnvelope
+  set?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
+  disconnect?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
+  delete?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
+  connect?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
+  update?: Prisma.BlogCommentUpdateWithWhereUniqueWithoutUserInput | Prisma.BlogCommentUpdateWithWhereUniqueWithoutUserInput[]
+  updateMany?: Prisma.BlogCommentUpdateManyWithWhereWithoutUserInput | Prisma.BlogCommentUpdateManyWithWhereWithoutUserInput[]
+  deleteMany?: Prisma.BlogCommentScalarWhereInput | Prisma.BlogCommentScalarWhereInput[]
 }
 
-export type BlogCommentCreateManyUserInputEnvelope = {
-  data: Prisma.BlogCommentCreateManyUserInput | Prisma.BlogCommentCreateManyUserInput[]
-  skipDuplicates?: boolean
-}
-
-export type BlogCommentUpsertWithWhereUniqueWithoutUserInput = {
-  where: Prisma.BlogCommentWhereUniqueInput
-  update: Prisma.XOR<Prisma.BlogCommentUpdateWithoutUserInput, Prisma.BlogCommentUncheckedUpdateWithoutUserInput>
-  create: Prisma.XOR<Prisma.BlogCommentCreateWithoutUserInput, Prisma.BlogCommentUncheckedCreateWithoutUserInput>
-}
-
-export type BlogCommentUpdateWithWhereUniqueWithoutUserInput = {
-  where: Prisma.BlogCommentWhereUniqueInput
-  data: Prisma.XOR<Prisma.BlogCommentUpdateWithoutUserInput, Prisma.BlogCommentUncheckedUpdateWithoutUserInput>
-}
-
-export type BlogCommentUpdateManyWithWhereWithoutUserInput = {
-  where: Prisma.BlogCommentScalarWhereInput
-  data: Prisma.XOR<Prisma.BlogCommentUpdateManyMutationInput, Prisma.BlogCommentUncheckedUpdateManyWithoutUserInput>
-}
-
-export type BlogCommentScalarWhereInput = {
-  AND?: Prisma.BlogCommentScalarWhereInput | Prisma.BlogCommentScalarWhereInput[]
-  OR?: Prisma.BlogCommentScalarWhereInput[]
-  NOT?: Prisma.BlogCommentScalarWhereInput | Prisma.BlogCommentScalarWhereInput[]
-  id?: Prisma.StringFilter<"BlogComment"> | string
-  blogId?: Prisma.StringFilter<"BlogComment"> | string
-  userId?: Prisma.StringFilter<"BlogComment"> | string
-  parentId?: Prisma.StringNullableFilter<"BlogComment"> | string | null
-  body?: Prisma.StringFilter<"BlogComment"> | string
-  isApproved?: Prisma.BoolFilter<"BlogComment"> | boolean
-  createdAt?: Prisma.DateTimeFilter<"BlogComment"> | Date | string
-  updatedAt?: Prisma.DateTimeFilter<"BlogComment"> | Date | string
+export type BlogCommentUncheckedUpdateManyWithoutUserNestedInput = {
+  create?: Prisma.XOR<Prisma.BlogCommentCreateWithoutUserInput, Prisma.BlogCommentUncheckedCreateWithoutUserInput> | Prisma.BlogCommentCreateWithoutUserInput[] | Prisma.BlogCommentUncheckedCreateWithoutUserInput[]
+  connectOrCreate?: Prisma.BlogCommentCreateOrConnectWithoutUserInput | Prisma.BlogCommentCreateOrConnectWithoutUserInput[]
+  upsert?: Prisma.BlogCommentUpsertWithWhereUniqueWithoutUserInput | Prisma.BlogCommentUpsertWithWhereUniqueWithoutUserInput[]
+  createMany?: Prisma.BlogCommentCreateManyUserInputEnvelope
+  set?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
+  disconnect?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
+  delete?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
+  connect?: Prisma.BlogCommentWhereUniqueInput | Prisma.BlogCommentWhereUniqueInput[]
+  update?: Prisma.BlogCommentUpdateWithWhereUniqueWithoutUserInput | Prisma.BlogCommentUpdateWithWhereUniqueWithoutUserInput[]
+  updateMany?: Prisma.BlogCommentUpdateManyWithWhereWithoutUserInput | Prisma.BlogCommentUpdateManyWithWhereWithoutUserInput[]
+  deleteMany?: Prisma.BlogCommentScalarWhereInput | Prisma.BlogCommentScalarWhereInput[]
 }
 
 export type BlogCommentCreateWithoutBlogInput = {
@@ -649,6 +587,20 @@ export type BlogCommentUpdateWithWhereUniqueWithoutBlogInput = {
 export type BlogCommentUpdateManyWithWhereWithoutBlogInput = {
   where: Prisma.BlogCommentScalarWhereInput
   data: Prisma.XOR<Prisma.BlogCommentUpdateManyMutationInput, Prisma.BlogCommentUncheckedUpdateManyWithoutBlogInput>
+}
+
+export type BlogCommentScalarWhereInput = {
+  AND?: Prisma.BlogCommentScalarWhereInput | Prisma.BlogCommentScalarWhereInput[]
+  OR?: Prisma.BlogCommentScalarWhereInput[]
+  NOT?: Prisma.BlogCommentScalarWhereInput | Prisma.BlogCommentScalarWhereInput[]
+  id?: Prisma.StringFilter<"BlogComment"> | string
+  blogId?: Prisma.StringFilter<"BlogComment"> | string
+  userId?: Prisma.StringFilter<"BlogComment"> | string
+  parentId?: Prisma.StringNullableFilter<"BlogComment"> | string | null
+  body?: Prisma.StringFilter<"BlogComment"> | string
+  isApproved?: Prisma.BoolFilter<"BlogComment"> | boolean
+  createdAt?: Prisma.DateTimeFilter<"BlogComment"> | Date | string
+  updatedAt?: Prisma.DateTimeFilter<"BlogComment"> | Date | string
 }
 
 export type BlogCommentCreateWithoutRepliesInput = {
@@ -759,7 +711,18 @@ export type BlogCommentUpdateManyWithWhereWithoutParentInput = {
   data: Prisma.XOR<Prisma.BlogCommentUpdateManyMutationInput, Prisma.BlogCommentUncheckedUpdateManyWithoutParentInput>
 }
 
-export type BlogCommentCreateManyUserInput = {
+export type BlogCommentCreateWithoutUserInput = {
+  id?: string
+  body: string
+  isApproved?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+  blog: Prisma.BlogCreateNestedOneWithoutCommentsInput
+  parent?: Prisma.BlogCommentCreateNestedOneWithoutRepliesInput
+  replies?: Prisma.BlogCommentCreateNestedManyWithoutParentInput
+}
+
+export type BlogCommentUncheckedCreateWithoutUserInput = {
   id?: string
   blogId: string
   parentId?: string | null
@@ -767,38 +730,33 @@ export type BlogCommentCreateManyUserInput = {
   isApproved?: boolean
   createdAt?: Date | string
   updatedAt?: Date | string
+  replies?: Prisma.BlogCommentUncheckedCreateNestedManyWithoutParentInput
 }
 
-export type BlogCommentUpdateWithoutUserInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  body?: Prisma.StringFieldUpdateOperationsInput | string
-  isApproved?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  blog?: Prisma.BlogUpdateOneRequiredWithoutCommentsNestedInput
-  parent?: Prisma.BlogCommentUpdateOneWithoutRepliesNestedInput
-  replies?: Prisma.BlogCommentUpdateManyWithoutParentNestedInput
+export type BlogCommentCreateOrConnectWithoutUserInput = {
+  where: Prisma.BlogCommentWhereUniqueInput
+  create: Prisma.XOR<Prisma.BlogCommentCreateWithoutUserInput, Prisma.BlogCommentUncheckedCreateWithoutUserInput>
 }
 
-export type BlogCommentUncheckedUpdateWithoutUserInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  blogId?: Prisma.StringFieldUpdateOperationsInput | string
-  parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  body?: Prisma.StringFieldUpdateOperationsInput | string
-  isApproved?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  replies?: Prisma.BlogCommentUncheckedUpdateManyWithoutParentNestedInput
+export type BlogCommentCreateManyUserInputEnvelope = {
+  data: Prisma.BlogCommentCreateManyUserInput | Prisma.BlogCommentCreateManyUserInput[]
+  skipDuplicates?: boolean
 }
 
-export type BlogCommentUncheckedUpdateManyWithoutUserInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  blogId?: Prisma.StringFieldUpdateOperationsInput | string
-  parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  body?: Prisma.StringFieldUpdateOperationsInput | string
-  isApproved?: Prisma.BoolFieldUpdateOperationsInput | boolean
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+export type BlogCommentUpsertWithWhereUniqueWithoutUserInput = {
+  where: Prisma.BlogCommentWhereUniqueInput
+  update: Prisma.XOR<Prisma.BlogCommentUpdateWithoutUserInput, Prisma.BlogCommentUncheckedUpdateWithoutUserInput>
+  create: Prisma.XOR<Prisma.BlogCommentCreateWithoutUserInput, Prisma.BlogCommentUncheckedCreateWithoutUserInput>
+}
+
+export type BlogCommentUpdateWithWhereUniqueWithoutUserInput = {
+  where: Prisma.BlogCommentWhereUniqueInput
+  data: Prisma.XOR<Prisma.BlogCommentUpdateWithoutUserInput, Prisma.BlogCommentUncheckedUpdateWithoutUserInput>
+}
+
+export type BlogCommentUpdateManyWithWhereWithoutUserInput = {
+  where: Prisma.BlogCommentScalarWhereInput
+  data: Prisma.XOR<Prisma.BlogCommentUpdateManyMutationInput, Prisma.BlogCommentUncheckedUpdateManyWithoutUserInput>
 }
 
 export type BlogCommentCreateManyBlogInput = {
@@ -879,6 +837,48 @@ export type BlogCommentUncheckedUpdateManyWithoutParentInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   blogId?: Prisma.StringFieldUpdateOperationsInput | string
   userId?: Prisma.StringFieldUpdateOperationsInput | string
+  body?: Prisma.StringFieldUpdateOperationsInput | string
+  isApproved?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+}
+
+export type BlogCommentCreateManyUserInput = {
+  id?: string
+  blogId: string
+  parentId?: string | null
+  body: string
+  isApproved?: boolean
+  createdAt?: Date | string
+  updatedAt?: Date | string
+}
+
+export type BlogCommentUpdateWithoutUserInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  body?: Prisma.StringFieldUpdateOperationsInput | string
+  isApproved?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  blog?: Prisma.BlogUpdateOneRequiredWithoutCommentsNestedInput
+  parent?: Prisma.BlogCommentUpdateOneWithoutRepliesNestedInput
+  replies?: Prisma.BlogCommentUpdateManyWithoutParentNestedInput
+}
+
+export type BlogCommentUncheckedUpdateWithoutUserInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  blogId?: Prisma.StringFieldUpdateOperationsInput | string
+  parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  body?: Prisma.StringFieldUpdateOperationsInput | string
+  isApproved?: Prisma.BoolFieldUpdateOperationsInput | boolean
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  replies?: Prisma.BlogCommentUncheckedUpdateManyWithoutParentNestedInput
+}
+
+export type BlogCommentUncheckedUpdateManyWithoutUserInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  blogId?: Prisma.StringFieldUpdateOperationsInput | string
+  parentId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   body?: Prisma.StringFieldUpdateOperationsInput | string
   isApproved?: Prisma.BoolFieldUpdateOperationsInput | boolean
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string

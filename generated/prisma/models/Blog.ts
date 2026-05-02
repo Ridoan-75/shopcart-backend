@@ -714,6 +714,14 @@ export type BlogUpdatetagsInput = {
   push?: string | string[]
 }
 
+export type NullableIntFieldUpdateOperationsInput = {
+  set?: number | null
+  increment?: number
+  decrement?: number
+  multiply?: number
+  divide?: number
+}
+
 export type BlogCreateNestedOneWithoutCommentsInput = {
   create?: Prisma.XOR<Prisma.BlogCreateWithoutCommentsInput, Prisma.BlogUncheckedCreateWithoutCommentsInput>
   connectOrCreate?: Prisma.BlogCreateOrConnectWithoutCommentsInput

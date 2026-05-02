@@ -481,48 +481,6 @@ export type FlashSaleItemSumOrderByAggregateInput = {
   soldCount?: Prisma.SortOrder
 }
 
-export type FlashSaleItemCreateNestedManyWithoutProductInput = {
-  create?: Prisma.XOR<Prisma.FlashSaleItemCreateWithoutProductInput, Prisma.FlashSaleItemUncheckedCreateWithoutProductInput> | Prisma.FlashSaleItemCreateWithoutProductInput[] | Prisma.FlashSaleItemUncheckedCreateWithoutProductInput[]
-  connectOrCreate?: Prisma.FlashSaleItemCreateOrConnectWithoutProductInput | Prisma.FlashSaleItemCreateOrConnectWithoutProductInput[]
-  createMany?: Prisma.FlashSaleItemCreateManyProductInputEnvelope
-  connect?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
-}
-
-export type FlashSaleItemUncheckedCreateNestedManyWithoutProductInput = {
-  create?: Prisma.XOR<Prisma.FlashSaleItemCreateWithoutProductInput, Prisma.FlashSaleItemUncheckedCreateWithoutProductInput> | Prisma.FlashSaleItemCreateWithoutProductInput[] | Prisma.FlashSaleItemUncheckedCreateWithoutProductInput[]
-  connectOrCreate?: Prisma.FlashSaleItemCreateOrConnectWithoutProductInput | Prisma.FlashSaleItemCreateOrConnectWithoutProductInput[]
-  createMany?: Prisma.FlashSaleItemCreateManyProductInputEnvelope
-  connect?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
-}
-
-export type FlashSaleItemUpdateManyWithoutProductNestedInput = {
-  create?: Prisma.XOR<Prisma.FlashSaleItemCreateWithoutProductInput, Prisma.FlashSaleItemUncheckedCreateWithoutProductInput> | Prisma.FlashSaleItemCreateWithoutProductInput[] | Prisma.FlashSaleItemUncheckedCreateWithoutProductInput[]
-  connectOrCreate?: Prisma.FlashSaleItemCreateOrConnectWithoutProductInput | Prisma.FlashSaleItemCreateOrConnectWithoutProductInput[]
-  upsert?: Prisma.FlashSaleItemUpsertWithWhereUniqueWithoutProductInput | Prisma.FlashSaleItemUpsertWithWhereUniqueWithoutProductInput[]
-  createMany?: Prisma.FlashSaleItemCreateManyProductInputEnvelope
-  set?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
-  disconnect?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
-  delete?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
-  connect?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
-  update?: Prisma.FlashSaleItemUpdateWithWhereUniqueWithoutProductInput | Prisma.FlashSaleItemUpdateWithWhereUniqueWithoutProductInput[]
-  updateMany?: Prisma.FlashSaleItemUpdateManyWithWhereWithoutProductInput | Prisma.FlashSaleItemUpdateManyWithWhereWithoutProductInput[]
-  deleteMany?: Prisma.FlashSaleItemScalarWhereInput | Prisma.FlashSaleItemScalarWhereInput[]
-}
-
-export type FlashSaleItemUncheckedUpdateManyWithoutProductNestedInput = {
-  create?: Prisma.XOR<Prisma.FlashSaleItemCreateWithoutProductInput, Prisma.FlashSaleItemUncheckedCreateWithoutProductInput> | Prisma.FlashSaleItemCreateWithoutProductInput[] | Prisma.FlashSaleItemUncheckedCreateWithoutProductInput[]
-  connectOrCreate?: Prisma.FlashSaleItemCreateOrConnectWithoutProductInput | Prisma.FlashSaleItemCreateOrConnectWithoutProductInput[]
-  upsert?: Prisma.FlashSaleItemUpsertWithWhereUniqueWithoutProductInput | Prisma.FlashSaleItemUpsertWithWhereUniqueWithoutProductInput[]
-  createMany?: Prisma.FlashSaleItemCreateManyProductInputEnvelope
-  set?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
-  disconnect?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
-  delete?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
-  connect?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
-  update?: Prisma.FlashSaleItemUpdateWithWhereUniqueWithoutProductInput | Prisma.FlashSaleItemUpdateWithWhereUniqueWithoutProductInput[]
-  updateMany?: Prisma.FlashSaleItemUpdateManyWithWhereWithoutProductInput | Prisma.FlashSaleItemUpdateManyWithWhereWithoutProductInput[]
-  deleteMany?: Prisma.FlashSaleItemScalarWhereInput | Prisma.FlashSaleItemScalarWhereInput[]
-}
-
 export type FlashSaleItemCreateNestedManyWithoutFlashSaleInput = {
   create?: Prisma.XOR<Prisma.FlashSaleItemCreateWithoutFlashSaleInput, Prisma.FlashSaleItemUncheckedCreateWithoutFlashSaleInput> | Prisma.FlashSaleItemCreateWithoutFlashSaleInput[] | Prisma.FlashSaleItemUncheckedCreateWithoutFlashSaleInput[]
   connectOrCreate?: Prisma.FlashSaleItemCreateOrConnectWithoutFlashSaleInput | Prisma.FlashSaleItemCreateOrConnectWithoutFlashSaleInput[]
@@ -565,67 +523,46 @@ export type FlashSaleItemUncheckedUpdateManyWithoutFlashSaleNestedInput = {
   deleteMany?: Prisma.FlashSaleItemScalarWhereInput | Prisma.FlashSaleItemScalarWhereInput[]
 }
 
-export type FlashSaleItemCreateWithoutProductInput = {
-  id?: string
-  salePrice: number
-  originalPrice: number
-  discountPercent: number
-  stockLimit?: number | null
-  soldCount?: number
-  createdAt?: Date | string
-  flashSale: Prisma.FlashSaleCreateNestedOneWithoutItemsInput
+export type FlashSaleItemCreateNestedManyWithoutProductInput = {
+  create?: Prisma.XOR<Prisma.FlashSaleItemCreateWithoutProductInput, Prisma.FlashSaleItemUncheckedCreateWithoutProductInput> | Prisma.FlashSaleItemCreateWithoutProductInput[] | Prisma.FlashSaleItemUncheckedCreateWithoutProductInput[]
+  connectOrCreate?: Prisma.FlashSaleItemCreateOrConnectWithoutProductInput | Prisma.FlashSaleItemCreateOrConnectWithoutProductInput[]
+  createMany?: Prisma.FlashSaleItemCreateManyProductInputEnvelope
+  connect?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
 }
 
-export type FlashSaleItemUncheckedCreateWithoutProductInput = {
-  id?: string
-  flashSaleId: string
-  salePrice: number
-  originalPrice: number
-  discountPercent: number
-  stockLimit?: number | null
-  soldCount?: number
-  createdAt?: Date | string
+export type FlashSaleItemUncheckedCreateNestedManyWithoutProductInput = {
+  create?: Prisma.XOR<Prisma.FlashSaleItemCreateWithoutProductInput, Prisma.FlashSaleItemUncheckedCreateWithoutProductInput> | Prisma.FlashSaleItemCreateWithoutProductInput[] | Prisma.FlashSaleItemUncheckedCreateWithoutProductInput[]
+  connectOrCreate?: Prisma.FlashSaleItemCreateOrConnectWithoutProductInput | Prisma.FlashSaleItemCreateOrConnectWithoutProductInput[]
+  createMany?: Prisma.FlashSaleItemCreateManyProductInputEnvelope
+  connect?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
 }
 
-export type FlashSaleItemCreateOrConnectWithoutProductInput = {
-  where: Prisma.FlashSaleItemWhereUniqueInput
-  create: Prisma.XOR<Prisma.FlashSaleItemCreateWithoutProductInput, Prisma.FlashSaleItemUncheckedCreateWithoutProductInput>
+export type FlashSaleItemUpdateManyWithoutProductNestedInput = {
+  create?: Prisma.XOR<Prisma.FlashSaleItemCreateWithoutProductInput, Prisma.FlashSaleItemUncheckedCreateWithoutProductInput> | Prisma.FlashSaleItemCreateWithoutProductInput[] | Prisma.FlashSaleItemUncheckedCreateWithoutProductInput[]
+  connectOrCreate?: Prisma.FlashSaleItemCreateOrConnectWithoutProductInput | Prisma.FlashSaleItemCreateOrConnectWithoutProductInput[]
+  upsert?: Prisma.FlashSaleItemUpsertWithWhereUniqueWithoutProductInput | Prisma.FlashSaleItemUpsertWithWhereUniqueWithoutProductInput[]
+  createMany?: Prisma.FlashSaleItemCreateManyProductInputEnvelope
+  set?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
+  disconnect?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
+  delete?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
+  connect?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
+  update?: Prisma.FlashSaleItemUpdateWithWhereUniqueWithoutProductInput | Prisma.FlashSaleItemUpdateWithWhereUniqueWithoutProductInput[]
+  updateMany?: Prisma.FlashSaleItemUpdateManyWithWhereWithoutProductInput | Prisma.FlashSaleItemUpdateManyWithWhereWithoutProductInput[]
+  deleteMany?: Prisma.FlashSaleItemScalarWhereInput | Prisma.FlashSaleItemScalarWhereInput[]
 }
 
-export type FlashSaleItemCreateManyProductInputEnvelope = {
-  data: Prisma.FlashSaleItemCreateManyProductInput | Prisma.FlashSaleItemCreateManyProductInput[]
-  skipDuplicates?: boolean
-}
-
-export type FlashSaleItemUpsertWithWhereUniqueWithoutProductInput = {
-  where: Prisma.FlashSaleItemWhereUniqueInput
-  update: Prisma.XOR<Prisma.FlashSaleItemUpdateWithoutProductInput, Prisma.FlashSaleItemUncheckedUpdateWithoutProductInput>
-  create: Prisma.XOR<Prisma.FlashSaleItemCreateWithoutProductInput, Prisma.FlashSaleItemUncheckedCreateWithoutProductInput>
-}
-
-export type FlashSaleItemUpdateWithWhereUniqueWithoutProductInput = {
-  where: Prisma.FlashSaleItemWhereUniqueInput
-  data: Prisma.XOR<Prisma.FlashSaleItemUpdateWithoutProductInput, Prisma.FlashSaleItemUncheckedUpdateWithoutProductInput>
-}
-
-export type FlashSaleItemUpdateManyWithWhereWithoutProductInput = {
-  where: Prisma.FlashSaleItemScalarWhereInput
-  data: Prisma.XOR<Prisma.FlashSaleItemUpdateManyMutationInput, Prisma.FlashSaleItemUncheckedUpdateManyWithoutProductInput>
-}
-
-export type FlashSaleItemScalarWhereInput = {
-  AND?: Prisma.FlashSaleItemScalarWhereInput | Prisma.FlashSaleItemScalarWhereInput[]
-  OR?: Prisma.FlashSaleItemScalarWhereInput[]
-  NOT?: Prisma.FlashSaleItemScalarWhereInput | Prisma.FlashSaleItemScalarWhereInput[]
-  id?: Prisma.StringFilter<"FlashSaleItem"> | string
-  flashSaleId?: Prisma.StringFilter<"FlashSaleItem"> | string
-  productId?: Prisma.StringFilter<"FlashSaleItem"> | string
-  salePrice?: Prisma.FloatFilter<"FlashSaleItem"> | number
-  originalPrice?: Prisma.FloatFilter<"FlashSaleItem"> | number
-  discountPercent?: Prisma.FloatFilter<"FlashSaleItem"> | number
-  stockLimit?: Prisma.IntNullableFilter<"FlashSaleItem"> | number | null
-  soldCount?: Prisma.IntFilter<"FlashSaleItem"> | number
-  createdAt?: Prisma.DateTimeFilter<"FlashSaleItem"> | Date | string
+export type FlashSaleItemUncheckedUpdateManyWithoutProductNestedInput = {
+  create?: Prisma.XOR<Prisma.FlashSaleItemCreateWithoutProductInput, Prisma.FlashSaleItemUncheckedCreateWithoutProductInput> | Prisma.FlashSaleItemCreateWithoutProductInput[] | Prisma.FlashSaleItemUncheckedCreateWithoutProductInput[]
+  connectOrCreate?: Prisma.FlashSaleItemCreateOrConnectWithoutProductInput | Prisma.FlashSaleItemCreateOrConnectWithoutProductInput[]
+  upsert?: Prisma.FlashSaleItemUpsertWithWhereUniqueWithoutProductInput | Prisma.FlashSaleItemUpsertWithWhereUniqueWithoutProductInput[]
+  createMany?: Prisma.FlashSaleItemCreateManyProductInputEnvelope
+  set?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
+  disconnect?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
+  delete?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
+  connect?: Prisma.FlashSaleItemWhereUniqueInput | Prisma.FlashSaleItemWhereUniqueInput[]
+  update?: Prisma.FlashSaleItemUpdateWithWhereUniqueWithoutProductInput | Prisma.FlashSaleItemUpdateWithWhereUniqueWithoutProductInput[]
+  updateMany?: Prisma.FlashSaleItemUpdateManyWithWhereWithoutProductInput | Prisma.FlashSaleItemUpdateManyWithWhereWithoutProductInput[]
+  deleteMany?: Prisma.FlashSaleItemScalarWhereInput | Prisma.FlashSaleItemScalarWhereInput[]
 }
 
 export type FlashSaleItemCreateWithoutFlashSaleInput = {
@@ -676,7 +613,33 @@ export type FlashSaleItemUpdateManyWithWhereWithoutFlashSaleInput = {
   data: Prisma.XOR<Prisma.FlashSaleItemUpdateManyMutationInput, Prisma.FlashSaleItemUncheckedUpdateManyWithoutFlashSaleInput>
 }
 
-export type FlashSaleItemCreateManyProductInput = {
+export type FlashSaleItemScalarWhereInput = {
+  AND?: Prisma.FlashSaleItemScalarWhereInput | Prisma.FlashSaleItemScalarWhereInput[]
+  OR?: Prisma.FlashSaleItemScalarWhereInput[]
+  NOT?: Prisma.FlashSaleItemScalarWhereInput | Prisma.FlashSaleItemScalarWhereInput[]
+  id?: Prisma.StringFilter<"FlashSaleItem"> | string
+  flashSaleId?: Prisma.StringFilter<"FlashSaleItem"> | string
+  productId?: Prisma.StringFilter<"FlashSaleItem"> | string
+  salePrice?: Prisma.FloatFilter<"FlashSaleItem"> | number
+  originalPrice?: Prisma.FloatFilter<"FlashSaleItem"> | number
+  discountPercent?: Prisma.FloatFilter<"FlashSaleItem"> | number
+  stockLimit?: Prisma.IntNullableFilter<"FlashSaleItem"> | number | null
+  soldCount?: Prisma.IntFilter<"FlashSaleItem"> | number
+  createdAt?: Prisma.DateTimeFilter<"FlashSaleItem"> | Date | string
+}
+
+export type FlashSaleItemCreateWithoutProductInput = {
+  id?: string
+  salePrice: number
+  originalPrice: number
+  discountPercent: number
+  stockLimit?: number | null
+  soldCount?: number
+  createdAt?: Date | string
+  flashSale: Prisma.FlashSaleCreateNestedOneWithoutItemsInput
+}
+
+export type FlashSaleItemUncheckedCreateWithoutProductInput = {
   id?: string
   flashSaleId: string
   salePrice: number
@@ -687,37 +650,30 @@ export type FlashSaleItemCreateManyProductInput = {
   createdAt?: Date | string
 }
 
-export type FlashSaleItemUpdateWithoutProductInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  salePrice?: Prisma.FloatFieldUpdateOperationsInput | number
-  originalPrice?: Prisma.FloatFieldUpdateOperationsInput | number
-  discountPercent?: Prisma.FloatFieldUpdateOperationsInput | number
-  stockLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  soldCount?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  flashSale?: Prisma.FlashSaleUpdateOneRequiredWithoutItemsNestedInput
+export type FlashSaleItemCreateOrConnectWithoutProductInput = {
+  where: Prisma.FlashSaleItemWhereUniqueInput
+  create: Prisma.XOR<Prisma.FlashSaleItemCreateWithoutProductInput, Prisma.FlashSaleItemUncheckedCreateWithoutProductInput>
 }
 
-export type FlashSaleItemUncheckedUpdateWithoutProductInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  flashSaleId?: Prisma.StringFieldUpdateOperationsInput | string
-  salePrice?: Prisma.FloatFieldUpdateOperationsInput | number
-  originalPrice?: Prisma.FloatFieldUpdateOperationsInput | number
-  discountPercent?: Prisma.FloatFieldUpdateOperationsInput | number
-  stockLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  soldCount?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+export type FlashSaleItemCreateManyProductInputEnvelope = {
+  data: Prisma.FlashSaleItemCreateManyProductInput | Prisma.FlashSaleItemCreateManyProductInput[]
+  skipDuplicates?: boolean
 }
 
-export type FlashSaleItemUncheckedUpdateManyWithoutProductInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  flashSaleId?: Prisma.StringFieldUpdateOperationsInput | string
-  salePrice?: Prisma.FloatFieldUpdateOperationsInput | number
-  originalPrice?: Prisma.FloatFieldUpdateOperationsInput | number
-  discountPercent?: Prisma.FloatFieldUpdateOperationsInput | number
-  stockLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
-  soldCount?: Prisma.IntFieldUpdateOperationsInput | number
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+export type FlashSaleItemUpsertWithWhereUniqueWithoutProductInput = {
+  where: Prisma.FlashSaleItemWhereUniqueInput
+  update: Prisma.XOR<Prisma.FlashSaleItemUpdateWithoutProductInput, Prisma.FlashSaleItemUncheckedUpdateWithoutProductInput>
+  create: Prisma.XOR<Prisma.FlashSaleItemCreateWithoutProductInput, Prisma.FlashSaleItemUncheckedCreateWithoutProductInput>
+}
+
+export type FlashSaleItemUpdateWithWhereUniqueWithoutProductInput = {
+  where: Prisma.FlashSaleItemWhereUniqueInput
+  data: Prisma.XOR<Prisma.FlashSaleItemUpdateWithoutProductInput, Prisma.FlashSaleItemUncheckedUpdateWithoutProductInput>
+}
+
+export type FlashSaleItemUpdateManyWithWhereWithoutProductInput = {
+  where: Prisma.FlashSaleItemScalarWhereInput
+  data: Prisma.XOR<Prisma.FlashSaleItemUpdateManyMutationInput, Prisma.FlashSaleItemUncheckedUpdateManyWithoutProductInput>
 }
 
 export type FlashSaleItemCreateManyFlashSaleInput = {
@@ -756,6 +712,50 @@ export type FlashSaleItemUncheckedUpdateWithoutFlashSaleInput = {
 export type FlashSaleItemUncheckedUpdateManyWithoutFlashSaleInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   productId?: Prisma.StringFieldUpdateOperationsInput | string
+  salePrice?: Prisma.FloatFieldUpdateOperationsInput | number
+  originalPrice?: Prisma.FloatFieldUpdateOperationsInput | number
+  discountPercent?: Prisma.FloatFieldUpdateOperationsInput | number
+  stockLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  soldCount?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+}
+
+export type FlashSaleItemCreateManyProductInput = {
+  id?: string
+  flashSaleId: string
+  salePrice: number
+  originalPrice: number
+  discountPercent: number
+  stockLimit?: number | null
+  soldCount?: number
+  createdAt?: Date | string
+}
+
+export type FlashSaleItemUpdateWithoutProductInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  salePrice?: Prisma.FloatFieldUpdateOperationsInput | number
+  originalPrice?: Prisma.FloatFieldUpdateOperationsInput | number
+  discountPercent?: Prisma.FloatFieldUpdateOperationsInput | number
+  stockLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  soldCount?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+  flashSale?: Prisma.FlashSaleUpdateOneRequiredWithoutItemsNestedInput
+}
+
+export type FlashSaleItemUncheckedUpdateWithoutProductInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  flashSaleId?: Prisma.StringFieldUpdateOperationsInput | string
+  salePrice?: Prisma.FloatFieldUpdateOperationsInput | number
+  originalPrice?: Prisma.FloatFieldUpdateOperationsInput | number
+  discountPercent?: Prisma.FloatFieldUpdateOperationsInput | number
+  stockLimit?: Prisma.NullableIntFieldUpdateOperationsInput | number | null
+  soldCount?: Prisma.IntFieldUpdateOperationsInput | number
+  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
+}
+
+export type FlashSaleItemUncheckedUpdateManyWithoutProductInput = {
+  id?: Prisma.StringFieldUpdateOperationsInput | string
+  flashSaleId?: Prisma.StringFieldUpdateOperationsInput | string
   salePrice?: Prisma.FloatFieldUpdateOperationsInput | number
   originalPrice?: Prisma.FloatFieldUpdateOperationsInput | number
   discountPercent?: Prisma.FloatFieldUpdateOperationsInput | number
