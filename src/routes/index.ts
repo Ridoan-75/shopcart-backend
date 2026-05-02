@@ -6,7 +6,7 @@ import tagRoutes from "../modules/tag/tag.route";
 import productRoutes from "../modules/product/product.route";
 import inventoryRoutes from "../modules/inventory/inventory.route";
 import addressRoutes from "../modules/address/address.route";
-
+import cartRoutes from "../modules/cart/cart.route";
 
 
 const router = Router();
@@ -18,5 +18,6 @@ router.use("/tags", tagRoutes);
 router.use("/products", productRoutes);
 router.use("/inventories", inventoryRoutes);
 router.use("/addresses", addressRoutes);
+router.use("/cart", cartRoutes);
 
 export default router;
