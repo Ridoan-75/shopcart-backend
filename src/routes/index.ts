@@ -13,6 +13,8 @@ import orderRoutes from "../modules/order/order.route";
 import paymentRoutes from "../modules/payment/payment.route";
 import shippingRoutes from "../modules/shipping/shipping.route";
 import reviewRoutes from "../modules/review/review.route";
+import bannerRoutes from "../modules/banner/banner.route";
+
 
 const router = Router();
 
@@ -30,5 +32,6 @@ router.use("/orders", orderRoutes);
 router.use("/payments", paymentRoutes);
 router.use("/shipping", shippingRoutes);
 router.use("/reviews", reviewRoutes);
+router.use("/banners", bannerRoutes);
 
 export default router;
