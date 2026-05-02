@@ -19,7 +19,7 @@ import blogRoutes from "../modules/blog/blog.route";
 import blogCommentRoutes from "../modules/blog-comment/blogComment.route";
 import newsletterRoutes from "../modules/newsletter/newsletter.route";
 import notificationRoutes from "../modules/notification/notification.route";
-
+import uploadRoutes from "../modules/upload/upload.route";
 
 const router = Router();
 
@@ -43,4 +43,8 @@ router.use("/blogs", blogRoutes);
 router.use("/blog-comments", blogCommentRoutes);
 router.use("/newsletter", newsletterRoutes);
 router.use("/notifications", notificationRoutes);
+router.use("/upload", uploadRoutes);
+
+
+
 export default router;
