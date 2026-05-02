@@ -21,7 +21,7 @@ import newsletterRoutes from "../modules/newsletter/newsletter.route";
 import notificationRoutes from "../modules/notification/notification.route";
 import uploadRoutes from "../modules/upload/upload.route";
 import flashSaleRoutes from "../modules/flash-sale/flashSale.route";
-
+import dashboardRoutes from "../modules/dashboard/dashboard.route";
 
 
 
@@ -49,7 +49,7 @@ router.use("/newsletter", newsletterRoutes);
 router.use("/notifications", notificationRoutes);
 router.use("/upload", uploadRoutes);
 router.use("/flash-sales", flashSaleRoutes);
-
+router.use("/dashboard", dashboardRoutes);
 
 
 export default router;
