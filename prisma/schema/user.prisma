@@ -6,17 +6,21 @@ model User {
     avatar            String?
     phone             String?
     role              Role      @default(USER)
-    isEmailVerified   Boolean   @default(false)
+    isEmailVerified   Boolean   @default(true)
     emailVerifyToken  String?
     emailVerifyExpiry DateTime?
     resetToken        String?
     resetTokenExpiry  DateTime?
     googleId          String?   @unique
     facebookId        String?   @unique
-    isActive          Boolean   @default(true)
+    isActive          Boolean   @default(false)
     lastLoginAt       DateTime?
     createdAt         DateTime  @default(now())
     updatedAt         DateTime  @updatedAt
+
+    otp          String?
+    otpExpiry    DateTime?
+    refreshToken String?
 
     addresses     Address[]
     orders        Order[]

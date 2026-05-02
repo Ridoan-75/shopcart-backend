@@ -1,13 +1,23 @@
-import app from './app';
-import config from './config';
+import "dotenv/config";
+import dotenv from "dotenv";
+import app from "./app";
+import config from "./config";
+import { env } from './config/env';
+import { db } from "./config/db";
+
+ dotenv.config();
 
 async function main() {
   try {
-    app.listen(config.port, () => {
-      console.log(`Example app listening on port <%= config.port %>`);
+    await db.$connect();
+    console.log("✅ Database connected");
+
+    app.listen(env.port, () => {
+      console.log(`🚀 Server running on http://localhost:${env.port}`);
     });
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
+    console.error("❌ Failed to start server:", error);
+    process.exit(1);
   }
 }
 

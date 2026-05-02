@@ -4,18 +4,18 @@
     "module": "commonjs",
     "moduleResolution": "bundler",
     "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": true,
+    "rootDir": ".",
+    "types": ["node"],
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "prisma.config.ts"
   ],
   "exclude": [
     "node_modules",
-    "dist",
-    "generated/prisma"
+    "dist"
   ]
 }
