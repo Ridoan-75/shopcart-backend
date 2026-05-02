@@ -18,7 +18,7 @@ import blogCategoryRoutes from "../modules/blog-category/bloCategory.route";
 import blogRoutes from "../modules/blog/blog.route";
 import blogCommentRoutes from "../modules/blog-comment/blogComment.route";
 import newsletterRoutes from "../modules/newsletter/newsletter.route";
-
+import notificationRoutes from "../modules/notification/notification.route";
 
 
 const router = Router();
@@ -42,5 +42,5 @@ router.use("/blog-categories", blogCategoryRoutes);
 router.use("/blogs", blogRoutes);
 router.use("/blog-comments", blogCommentRoutes);
 router.use("/newsletter", newsletterRoutes);
-
+router.use("/notifications", notificationRoutes);
 export default router;
