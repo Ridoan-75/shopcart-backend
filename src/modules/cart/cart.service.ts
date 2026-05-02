@@ -65,16 +65,16 @@ const getOrCreateCart = async (userId: string) => {
 // Helper: calculate cart totals
 const calculateTotals = (
   items: { price: number; quantity: number }[],
-  coupon: { discountType: string; discountValue: number } | null
+  coupon: { type: string; value: number } | null
 ) => {
   const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
   let discount = 0;
 
   if (coupon) {
-    if (coupon.discountType === "PERCENTAGE") {
-      discount = (subtotal * coupon.discountValue) / 100;
+    if (coupon.type === "PERCENTAGE") {
+      discount = (subtotal * coupon.value) / 100;
     } else {
-      discount = coupon.discountValue;
+      discount = coupon.value;
     }
     discount = Math.min(discount, subtotal);
   }
