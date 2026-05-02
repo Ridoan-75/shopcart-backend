@@ -14,7 +14,9 @@ import paymentRoutes from "../modules/payment/payment.route";
 import shippingRoutes from "../modules/shipping/shipping.route";
 import reviewRoutes from "../modules/review/review.route";
 import bannerRoutes from "../modules/banner/banner.route";
-
+import blogCategoryRoutes from "../modules/blog-category/bloCategory.route";
+import blogRoutes from "../modules/blog/blog.route";
+import blogCommentRoutes from "../modules/blog-comment/blogComment.route";
 
 const router = Router();
 
@@ -33,5 +35,8 @@ router.use("/payments", paymentRoutes);
 router.use("/shipping", shippingRoutes);
 router.use("/reviews", reviewRoutes);
 router.use("/banners", bannerRoutes);
+router.use("/blog-categories", blogCategoryRoutes);
+router.use("/blogs", blogRoutes);
+router.use("/blog-comments", blogCommentRoutes);
 
 export default router;
