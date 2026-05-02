@@ -1,4 +1,4 @@
-import { CouponType } from "@prisma/client";
+import type { CouponType } from "../../../generated/prisma/enums";
 
 export interface ICreateCoupon {
   code: string;

@@ -1,4 +1,4 @@
-import { OrderStatus } from "@prisma/client";
+import type { OrderStatus } from "../../../generated/prisma/enums";
 
 export interface IPlaceOrder {
   addressId: string;

@@ -2,7 +2,7 @@ import { db } from "../../config/db";
 import { stripe } from "../../config/stripe";
 import { env } from "../../config/env";
 import { AppError } from "../../utils/apiError";
-import { PaymentStatus, PaymentMethod } from "@prisma/client";
+import { PaymentStatus, PaymentMethod } from "../../../generated/prisma/enums";
 import { ICreatePaymentSession, IPaymentFilters } from "./payment.interface";
 
 const paymentInclude = {

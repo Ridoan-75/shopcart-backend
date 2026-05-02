@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { OrderStatus } from "@prisma/client";
+import { OrderStatus } from "../../../generated/prisma/enums";
 
 export const placeOrderSchema = z.object({
   body: z.object({

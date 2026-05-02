@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { CouponType } from "@prisma/client";
+import { CouponType } from "../../../generated/prisma/enums";
 
 export const createCouponSchema = z.object({
   body: z.object({

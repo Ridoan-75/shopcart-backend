@@ -1,4 +1,4 @@
-import { PaymentMethod, PaymentStatus } from "@prisma/client";
+import type { PaymentMethod, PaymentStatus } from "../../../generated/prisma/enums";
 
 export interface ICreatePaymentSession {
   orderId: string;
