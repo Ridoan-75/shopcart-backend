@@ -22,7 +22,7 @@ import notificationRoutes from "../modules/notification/notification.route";
 import uploadRoutes from "../modules/upload/upload.route";
 import flashSaleRoutes from "../modules/flash-sale/flashSale.route";
 import dashboardRoutes from "../modules/dashboard/dashboard.route";
-
+import aiRoutes from "../modules/ai/ai.route";
 
 
 const router = Router();
@@ -50,6 +50,7 @@ router.use("/notifications", notificationRoutes);
 router.use("/upload", uploadRoutes);
 router.use("/flash-sales", flashSaleRoutes);
 router.use("/dashboard", dashboardRoutes);
+router.use("/ai", aiRoutes);
 
 
 export default router;
