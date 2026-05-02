@@ -1,7 +1,6 @@
 import "dotenv/config";
 import dotenv from "dotenv";
 import app from "./app";
-import config from "./config";
 import { env } from './config/env';
 import { db } from "./config/db";
 
